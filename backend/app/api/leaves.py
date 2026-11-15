@@ -192,7 +192,9 @@ def get_leave_request(request_id):
 @jwt_required()
 def cancel_leave_request(request_id):
     user = current_user()
-    leave_request = db.session.get(LeaveRequest, request_id)
+    leave_request = (
+        LeaveRequest.query.filter_by(id=request_id).with_for_update().first()
+    )
     if leave_request is None:
         raise ApiError("Leave request not found.", 404)
     if leave_request.user_id != user.id:
@@ -209,6 +211,7 @@ def cancel_leave_request(request_id):
             leave_request.user,
             leave_request.leave_type,
             leave_request.start_date.year,
+            for_update=True,
         )
         balance.used_days = max(0, balance.used_days - leave_request.days)
 
@@ -235,7 +238,9 @@ def review_leave_request(request_id):
         validator.errors["note"] = "Add a short note explaining the rejection."
     validator.raise_if_errors()
 
-    leave_request = db.session.get(LeaveRequest, request_id)
+    leave_request = (
+        LeaveRequest.query.filter_by(id=request_id).with_for_update().first()
+    )
     if leave_request is None:
         raise ApiError("Leave request not found.", 404)
     if leave_request.status != "pending":

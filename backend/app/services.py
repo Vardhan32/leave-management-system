@@ -27,10 +27,13 @@ def working_days(start, end):
     return total
 
 
-def balance_for(user, leave_type, year):
-    balance = LeaveBalance.query.filter_by(
+def balance_for(user, leave_type, year, for_update=False):
+    query = LeaveBalance.query.filter_by(
         user_id=user.id, leave_type_id=leave_type.id, year=year
-    ).first()
+    )
+    if for_update:
+        query = query.with_for_update()
+    balance = query.first()
     if balance is None:
         balance = LeaveBalance(
             user_id=user.id,
@@ -99,7 +102,10 @@ def validate_leave_window(user, leave_type, start, end, year):
 
 def approve_request(leave_request, reviewer, note):
     balance = balance_for(
-        leave_request.user, leave_request.leave_type, leave_request.start_date.year
+        leave_request.user,
+        leave_request.leave_type,
+        leave_request.start_date.year,
+        for_update=True,
     )
     if balance.remaining_days < leave_request.days:
         return {
