@@ -1,0 +1,30 @@
+{
+  "checked": {
+    "documents": 3,
+    "api": 8
+  },
+  "ui": {
+    "content-security-policy": "missing",
+    "x-content-type-options": "missing",
+    "x-frame-options": "missing",
+    "referrer-policy": "missing",
+    "strict-transport-security": "missing"
+  },
+  "api": {
+    "content-security-policy": "missing",
+    "x-content-type-options": "missing",
+    "x-frame-options": "missing",
+    "referrer-policy": "missing",
+    "strict-transport-security": "missing"
+  },
+  "setCookie": 0,
+  "serverHeaders": [
+    "ESF",
+    "Werkzeug/3.1.9 Python/3.12.10",
+    "sffe"
+  ],
+  "localStorageKeys": [
+    "leavedesk.token"
+  ],
+  "cookiesInBrowser": 0
+}

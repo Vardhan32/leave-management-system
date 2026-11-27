@@ -1,0 +1,45 @@
+﻿
+
+  █ THRESHOLDS 
+
+    http_req_duration{op:create,phase:steady}
+    ✓ 'p(95)<500' p(95)=242.25ms
+
+    http_req_failed{op:cancel,phase:steady}
+    ✓ 'rate<0.01' rate=0.00%
+
+    http_req_failed{op:create,phase:steady}
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 784     11.070091/s
+    checks_succeeded...: 100.00% 784 out of 784
+    checks_failed......: 0.00%   0 out of 784
+
+    ✓ create answered 201
+    ✓ cancel answered 200
+
+    HTTP
+    http_req_duration..............: avg=86.88ms min=13.13ms med=57.43ms  p(90)=158.24ms p(95)=229.81ms p(99)=482.67ms max=1.61s
+      { expected_response:true }...: avg=86.88ms min=13.13ms med=57.43ms  p(90)=158.24ms p(95)=229.81ms p(99)=482.67ms max=1.61s
+      { op:create,phase:steady }...: avg=96.39ms min=25.07ms med=63.79ms  p(90)=179.87ms p(95)=242.25ms p(99)=476.59ms max=1.61s
+    http_req_failed................: 0.00%  0 out of 786
+      { op:cancel,phase:steady }...: 0.00%  0 out of 326
+      { op:create,phase:steady }...: 0.00%  0 out of 326
+    http_reqs......................: 786    11.098331/s
+
+    EXECUTION
+    iteration_duration.............: avg=178.7ms min=49.14ms med=125.76ms p(90)=320.6ms  p(95)=438.37ms p(99)=873.71ms max=1.84s
+    iterations.....................: 392    5.535046/s
+    vus............................: 1      min=1        max=1
+    vus_max........................: 1      min=1        max=1
+
+    NETWORK
+    data_received..................: 670 kB 9.5 kB/s
+    data_sent......................: 437 kB 6.2 kB/s
+
+
+
+k6 exit code: 0 (0 = all thresholds met, 99 = a threshold was crossed)

@@ -1,0 +1,17 @@
+
+Running 6 tests using 1 worker
+
+axe after login: 1 violation rules, 2 elements
+  ok 1 [accessibility] › specs\accessibility\axe-scan.spec.ts:38:3 › axe scans (after) › login screen (12.2s)
+axe after my-leave: 0 violation rules, 0 elements
+  ok 2 [accessibility] › specs\accessibility\axe-scan.spec.ts:44:3 › axe scans (after) › UC-01/UC-03 My leave page (11.3s)
+axe after apply-dialog: 0 violation rules, 0 elements
+  ok 3 [accessibility] › specs\accessibility\axe-scan.spec.ts:52:3 › axe scans (after) › UC-01 apply dialog (10.8s)
+axe after request-detail-dialog: 0 violation rules, 0 elements
+  ok 4 [accessibility] › specs\accessibility\axe-scan.spec.ts:60:3 › axe scans (after) › UC-03 request detail dialog (10.8s)
+axe after approvals: 1 violation rules, 1 elements
+  ok 5 [accessibility] › specs\accessibility\axe-scan.spec.ts:68:3 › axe scans (after) › UC-02 approvals page (15.0s)
+axe after review-dialog: 2 violation rules, 2 elements
+  ok 6 [accessibility] › specs\accessibility\axe-scan.spec.ts:76:3 › axe scans (after) › UC-02 review dialog (14.6s)
+
+  6 passed (1.7m)

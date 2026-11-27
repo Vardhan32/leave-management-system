@@ -1,0 +1,14 @@
+{
+  "screen": "my-leave",
+  "url": "http://localhost:5173/leave",
+  "axeVersion": "4.14.1",
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 12
+    }
+  ],
+  "passes": 42
+}

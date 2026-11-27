@@ -1,0 +1,7 @@
+{
+  "request": "GET http://localhost:5001/api/leave-balances?user_id=3",
+  "status": 403,
+  "body": {
+    "message": "You can only view your own leave balances."
+  }
+}

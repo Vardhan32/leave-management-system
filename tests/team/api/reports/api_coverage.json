@@ -1,0 +1,113 @@
+{
+  "calls": 1427,
+  "criteria": {
+    "path": {
+      "covered": 9,
+      "total": 9,
+      "percent": 100.0,
+      "missing": []
+    },
+    "operation": {
+      "covered": 10,
+      "total": 10,
+      "percent": 100.0,
+      "missing": []
+    },
+    "parameter": {
+      "covered": 13,
+      "total": 13,
+      "percent": 100.0,
+      "missing": []
+    },
+    "parameter value": {
+      "covered": 6,
+      "total": 6,
+      "percent": 100.0,
+      "missing": []
+    },
+    "content type": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "missing": []
+    },
+    "status code class": {
+      "covered": 19,
+      "total": 19,
+      "percent": 100.0,
+      "missing": []
+    },
+    "status code": {
+      "covered": 37,
+      "total": 37,
+      "percent": 100.0,
+      "missing": []
+    },
+    "response body property": {
+      "covered": 97,
+      "total": 97,
+      "percent": 100.0,
+      "missing": []
+    }
+  },
+  "observed_status": {
+    "GET /api/auth/me": [
+      200,
+      401
+    ],
+    "GET /api/health": [
+      200
+    ],
+    "GET /api/leave-balances": [
+      200,
+      400,
+      401,
+      403,
+      404
+    ],
+    "GET /api/leave-requests": [
+      200,
+      400,
+      401
+    ],
+    "GET /api/leave-requests/{id}": [
+      200,
+      401,
+      404
+    ],
+    "GET /api/leave-types": [
+      200,
+      401
+    ],
+    "POST /api/auth/login": [
+      200,
+      400,
+      401,
+      422
+    ],
+    "POST /api/leave-requests": [
+      201,
+      400,
+      401,
+      404,
+      422
+    ],
+    "POST /api/leave-requests/{id}/cancel": [
+      200,
+      401,
+      403,
+      404,
+      409
+    ],
+    "POST /api/leave-requests/{id}/review": [
+      200,
+      400,
+      401,
+      403,
+      404,
+      409,
+      422
+    ]
+  },
+  "unmatched_calls": []
+}

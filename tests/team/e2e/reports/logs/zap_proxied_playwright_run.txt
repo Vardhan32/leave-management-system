@@ -1,0 +1,13 @@
+
+Running 8 tests using 1 worker
+
+  ok 1 [use-cases] › specs\use-cases\uc01-apply-leave.spec.ts:13:3 › UC-01 Apply for leave › UC-01-M1 main: apply for 2 casual days @FR-01 @FR-02 @BR1 (37.9s)
+  ok 2 [use-cases] › specs\use-cases\uc01-apply-leave.spec.ts:95:3 › UC-01 Apply for leave › UC-01-E3 exception: more days than the balance @FR-05 @BR1 (29.8s)
+  ok 3 [use-cases] › specs\use-cases\uc02-review-leave.spec.ts:22:3 › UC-02 Review a leave request › UC-02-M1 main: approve with a note @FR-07 @BR2 @BR3 (16.4s)
+  ok 4 [use-cases] › specs\use-cases\uc02-review-leave.spec.ts:55:3 › UC-02 Review a leave request › UC-02-A2 alternative: reject with a note, balance unchanged @FR-08 @BR3 (31.5s)
+  ok 5 [usability] › specs\usability\usability.spec.ts:58:3 › Usability › U-01 apply task: rejected value, correction, success @FR-01 @FR-05 @BR1 (26.9s)
+  ok 6 [usability] › specs\usability\usability.spec.ts:92:3 › Usability › U-02 review task: admin approves and sees the confirmation @FR-07 (25.8s)
+  ok 7 [security] › specs\security\access-control.spec.ts:46:3 › Access control › AC-04 admin approves an employee request: allowed @FR-07 @BR2 (27.3s)
+  ok 8 [security] › specs\security\access-control.spec.ts:137:3 › Access control › AC-11 no session: the browser is sent to /login @FR-12 (5.2s)
+
+  8 passed (3.9m)

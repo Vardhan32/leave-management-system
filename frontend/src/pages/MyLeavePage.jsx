@@ -328,7 +328,9 @@ export default function MyLeavePage() {
                     <th>Days</th>
                     <th>Applied on</th>
                     <th>Status</th>
-                    <th aria-label="Actions" />
+                    <th>
+                      <span className="sr-only">Actions</span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>

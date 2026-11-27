@@ -1,5 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
+
+const FOCUSABLE =
+  'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 export default function Modal({
   open,
@@ -10,11 +13,46 @@ export default function Modal({
   footer,
   size = "md",
 }) {
+  const dialogRef = useRef(null);
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
+
   useEffect(() => {
     if (!open) return undefined;
 
+    const dialog = dialogRef.current;
+    const opener = document.activeElement;
+
+    // Move focus into the dialog: the first field in the body, or the dialog itself.
+    const firstField = dialog.querySelector(".modal__body")?.querySelector(FOCUSABLE);
+    (firstField || dialog).focus();
+
     function handleKey(event) {
-      if (event.key === "Escape") onClose();
+      if (event.key === "Escape") {
+        onCloseRef.current();
+        return;
+      }
+      if (event.key !== "Tab") return;
+
+      // Keep Tab and Shift+Tab inside the dialog.
+      const items = Array.from(dialog.querySelectorAll(FOCUSABLE));
+      if (!items.length) {
+        event.preventDefault();
+        return;
+      }
+      const first = items[0];
+      const last = items[items.length - 1];
+      const active = document.activeElement;
+      if (!dialog.contains(active)) {
+        event.preventDefault();
+        first.focus();
+      } else if (event.shiftKey && (active === first || active === dialog)) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
     }
 
     const previousOverflow = document.body.style.overflow;
@@ -24,8 +62,10 @@ export default function Modal({
     return () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKey);
+      // Give focus back to the control that opened the dialog.
+      if (opener && typeof opener.focus === "function") opener.focus();
     };
-  }, [open, onClose]);
+  }, [open]);
 
   if (!open) return null;
 
@@ -38,10 +78,12 @@ export default function Modal({
       }}
     >
       <div
+        ref={dialogRef}
         className={`modal modal--${size}`}
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
+        tabIndex={-1}
       >
         <header className="modal__head">
           <div>

@@ -1,0 +1,45 @@
+test,requirements,result,status
+UC-01-M1 main: apply for 2 casual days,BR1 FR-01 FR-02,pass,expected
+UC-01-A1 alternative: another leave type (earned),FR-01,pass,expected
+UC-01-A2 alternative: a range over a weekend counts weekdays only,BR1 FR-01,pass,expected
+UC-01-A3 alternative: open the form from the "Plan a break" link,FR-01,pass,expected
+UC-01-E1 exception: end date before start date,FR-03,pass,expected
+UC-01-E2 exception: reason shorter than 10 characters,FR-02,pass,expected
+UC-01-E3 exception: more days than the balance,BR1 FR-05,pass,expected
+UC-01-E4 exception: dates overlap an existing request,BR4 FR-04,pass,expected
+UC-01-E5 exception: start date in the past,FR-03,pass,expected
+UC-01-D1 known defect: the balance hint uses the year of the chosen dates,FR-05,pass,expected
+UC-02-M1 main: approve with a note,BR2 BR3 FR-07,pass,expected
+UC-02-A1 alternative: approve without a note,FR-07,pass,expected
+UC-02-A2 alternative: reject with a note; balance unchanged,BR3 FR-08,pass,expected
+UC-02-A3 alternative: the decided request moves to the Approved tab,FR-07,pass,expected
+UC-02-E1 exception: reject without a note,BR2 FR-08,pass,expected
+UC-02-E2 exception: approval would exceed the balance,BR1 FR-09,pass,expected
+UC-02-D1 known defect: the dialog warns when the request year has too few days left,FR-09,pass,expected
+UC-02-E3 exception: the request was already decided,BR3 FR-10,pass,expected
+UC-02-E4 exception: an admin cannot review their own request,BR2 FR-10,pass,expected
+UC-03-M1 main: withdraw a pending request,BR3 FR-11,pass,expected
+UC-03-A1 alternative: cancel approved leave; days return,BR3 FR-11,pass,expected
+UC-03-A2 alternative: "Keep it" leaves the request unchanged,FR-11,pass,expected
+UC-03-E1 exception: leave that already started,BR3 FR-11,pass,expected
+UC-03-E2 exception: a rejected request cannot be cancelled,BR3 FR-11,pass,expected
+U-01 apply task: rejected value; correction; success,BR1 FR-01 FR-05,pass,expected
+U-02 review task: admin approves and sees the confirmation,FR-07,pass,expected
+U-03 keyboard: tab order through the apply form; submit with Enter,FR-01,pass,expected
+U-04 focus moves into the dialog when it opens,FR-01,pass,expected
+U-05 Tab stays inside the open dialog,FR-01,pass,expected
+AC-01 employee opens /approvals: denied; sent to the dashboard,FR-10,pass,expected
+AC-02 employee opens /team: denied; sent to the dashboard,FR-10,pass,expected
+AC-03 employee calls the review endpoint: denied with 403,BR2 FR-10,pass,expected
+AC-04 admin approves an employee request: allowed,BR2 FR-07,pass,expected
+AC-05 admin approves their own request: denied with 403,BR2 FR-10,pass,expected
+AC-06 employee reads another employee's request: hidden with 404,FR-12,pass,expected
+AC-07 employee cancels their own pending request: allowed,FR-11,pass,expected
+AC-08 employee cancels another employee's request: denied with 403,FR-11 FR-12,pass,expected
+AC-09 employee reads another employee's balances: denied with 403,FR-12,pass,expected
+AC-10 employee calls the admin team endpoint: denied with 403,FR-10,pass,expected
+AC-11 no session: the browser is sent to /login,FR-12,pass,expected
+AC-12 no token: the API answers 401,FR-12,pass,expected
+AC-13 admin opens /approvals: allowed,FR-10,pass,expected
+PC-01 security headers and cookies on the UI and API responses,,pass,expected
+PC-02 CORS: a foreign origin gets no permission headers,,pass,expected

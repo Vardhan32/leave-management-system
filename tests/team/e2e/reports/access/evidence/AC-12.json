@@ -1,0 +1,7 @@
+{
+  "request": "GET http://localhost:5001/api/leave-requests",
+  "status": 401,
+  "body": {
+    "message": "Authentication required."
+  }
+}

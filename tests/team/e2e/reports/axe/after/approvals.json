@@ -1,0 +1,54 @@
+{
+  "screen": "approvals",
+  "url": "http://localhost:5173/approvals",
+  "axeVersion": "4.14.1",
+  "violations": [
+    {
+      "id": "empty-table-header",
+      "impact": "minor",
+      "tags": [
+        "cat.name-role-value",
+        "best-practice"
+      ],
+      "description": "Ensure table headers have discernible text",
+      "help": "Table header text should not be empty",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/empty-table-header?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "minor",
+          "html": "<th aria-label=\"Actions\"></th>",
+          "target": [
+            "th[aria-label=\"Actions\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 12
+    }
+  ],
+  "passes": 44
+}

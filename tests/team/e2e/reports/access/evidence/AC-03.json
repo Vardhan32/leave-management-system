@@ -1,0 +1,7 @@
+{
+  "request": "POST http://localhost:5001/api/leave-requests/52/review",
+  "status": 403,
+  "body": {
+    "message": "Admin access is required."
+  }
+}

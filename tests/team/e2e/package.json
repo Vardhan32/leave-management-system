@@ -1,0 +1,18 @@
+{
+  "name": "leavedesk-e2e",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Area 3 browser tests for LeaveDesk: use cases, usability, accessibility, access control",
+  "scripts": {
+    "test": "playwright test",
+    "test:uc": "playwright test --project=use-cases",
+    "report": "playwright show-report reports/html",
+    "axe:before": "AXE_PHASE=before playwright test --project=accessibility",
+    "axe:after": "AXE_PHASE=after playwright test --project=accessibility"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.49.0",
+    "lighthouse": "^12.8.2"
+  }
+}

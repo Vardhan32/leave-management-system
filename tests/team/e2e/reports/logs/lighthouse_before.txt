@@ -1,0 +1,4 @@
+login {"accessibility":95,"best-practices":100,"seo":91}
+my-leave {"accessibility":96,"best-practices":100,"seo":91}
+apply-dialog {"accessibility":97,"best-practices":100,"seo":91}
+approvals {"accessibility":96,"best-practices":100,"seo":91}

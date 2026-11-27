@@ -1,0 +1,115 @@
+
+Running 42 tests using 1 worker
+
+  ok  1 [use-cases] › specs\use-cases\uc01-apply-leave.spec.ts:13:3 › UC-01 Apply for leave › UC-01-M1 main: apply for 2 casual days @FR-01 @FR-02 @BR1 (21.9s)
+  ok  2 [use-cases] › specs\use-cases\uc01-apply-leave.spec.ts:33:3 › UC-01 Apply for leave › UC-01-A1 alternative: another leave type (earned) @FR-01 (11.3s)
+  ok  3 [use-cases] › specs\use-cases\uc01-apply-leave.spec.ts:47:3 › UC-01 Apply for leave › UC-01-A2 alternative: a range over a weekend counts weekdays only @FR-01 @BR1 (13.0s)
+  ok  4 [use-cases] › specs\use-cases\uc01-apply-leave.spec.ts:60:3 › UC-01 Apply for leave › UC-01-A3 alternative: open the form from the "Plan a break" link @FR-01 (11.5s)
+  ok  5 [use-cases] › specs\use-cases\uc01-apply-leave.spec.ts:74:3 › UC-01 Apply for leave › UC-01-E1 exception: end date before start date @FR-03 (7.9s)
+  ok  6 [use-cases] › specs\use-cases\uc01-apply-leave.spec.ts:85:3 › UC-01 Apply for leave › UC-01-E2 exception: reason shorter than 10 characters @FR-02 (6.6s)
+  ok  7 [use-cases] › specs\use-cases\uc01-apply-leave.spec.ts:95:3 › UC-01 Apply for leave › UC-01-E3 exception: more days than the balance @FR-05 @BR1 (7.7s)
+  ok  8 [use-cases] › specs\use-cases\uc01-apply-leave.spec.ts:106:3 › UC-01 Apply for leave › UC-01-E4 exception: dates overlap an existing request @FR-04 @BR4 (6.1s)
+  ok  9 [use-cases] › specs\use-cases\uc01-apply-leave.spec.ts:118:3 › UC-01 Apply for leave › UC-01-E5 exception: start date in the past @FR-03 (7.9s)
+  x  10 [use-cases] › specs\use-cases\uc01-apply-leave.spec.ts:132:3 › UC-01 Apply for leave › UC-01-D1 known defect: the balance hint uses the year of the chosen dates @FR-05 (14.3s)
+  ok 11 [use-cases] › specs\use-cases\uc02-review-leave.spec.ts:22:3 › UC-02 Review a leave request › UC-02-M1 main: approve with a note @FR-07 @BR2 @BR3 (8.5s)
+  ok 12 [use-cases] › specs\use-cases\uc02-review-leave.spec.ts:41:3 › UC-02 Review a leave request › UC-02-A1 alternative: approve without a note @FR-07 (10.0s)
+  ok 13 [use-cases] › specs\use-cases\uc02-review-leave.spec.ts:55:3 › UC-02 Review a leave request › UC-02-A2 alternative: reject with a note, balance unchanged @FR-08 @BR3 (7.7s)
+  ok 14 [use-cases] › specs\use-cases\uc02-review-leave.spec.ts:72:3 › UC-02 Review a leave request › UC-02-A3 alternative: the decided request moves to the Approved tab @FR-07 (15.0s)
+  ok 15 [use-cases] › specs\use-cases\uc02-review-leave.spec.ts:87:3 › UC-02 Review a leave request › UC-02-E1 exception: reject without a note @FR-08 @BR2 (8.0s)
+  ok 16 [use-cases] › specs\use-cases\uc02-review-leave.spec.ts:99:3 › UC-02 Review a leave request › UC-02-E2 exception: approval would exceed the balance @FR-09 @BR1 (14.9s)
+  x  17 [use-cases] › specs\use-cases\uc02-review-leave.spec.ts:122:3 › UC-02 Review a leave request › UC-02-D1 known defect: the dialog warns when the request year has too few days left @FR-09 (21.6s)
+  ok 18 [use-cases] › specs\use-cases\uc02-review-leave.spec.ts:137:3 › UC-02 Review a leave request › UC-02-E3 exception: the request was already decided @FR-10 @BR3 (8.8s)
+  ok 19 [use-cases] › specs\use-cases\uc02-review-leave.spec.ts:151:3 › UC-02 Review a leave request › UC-02-E4 exception: an admin cannot review their own request @FR-10 @BR2 (7.6s)
+  ok 20 [use-cases] › specs\use-cases\uc03-cancel-leave.spec.ts:22:3 › UC-03 Cancel leave › UC-03-M1 main: withdraw a pending request @FR-11 @BR3 (7.1s)
+  ok 21 [use-cases] › specs\use-cases\uc03-cancel-leave.spec.ts:35:3 › UC-03 Cancel leave › UC-03-A1 alternative: cancel approved leave, days return @FR-11 @BR3 (8.3s)
+  ok 22 [use-cases] › specs\use-cases\uc03-cancel-leave.spec.ts:50:3 › UC-03 Cancel leave › UC-03-A2 alternative: "Keep it" leaves the request unchanged @FR-11 (6.8s)
+  ok 23 [use-cases] › specs\use-cases\uc03-cancel-leave.spec.ts:62:3 › UC-03 Cancel leave › UC-03-E1 exception: leave that already started @FR-11 @BR3 (7.0s)
+  ok 24 [use-cases] › specs\use-cases\uc03-cancel-leave.spec.ts:78:3 › UC-03 Cancel leave › UC-03-E2 exception: a rejected request cannot be cancelled @FR-11 @BR3 (10.6s)
+  x  25 [usability] › specs\usability\usability.spec.ts:41:3 › Usability › U-01 apply task: rejected value, correction, success @FR-01 @FR-05 @BR1 (9.8s)
+  ok 26 [usability] › specs\usability\usability.spec.ts:75:3 › Usability › U-02 review task: admin approves and sees the confirmation @FR-07 (9.9s)
+  x  27 [usability] › specs\usability\usability.spec.ts:92:3 › Usability › U-03 keyboard: tab order through the apply form, submit with Enter @FR-01 (10.6s)
+  x  28 [usability] › specs\usability\usability.spec.ts:128:3 › Usability › U-04 focus moves into the dialog when it opens @FR-01 (12.5s)
+  x  29 [usability] › specs\usability\usability.spec.ts:137:3 › Usability › U-05 Tab stays inside the open dialog @FR-01 (4.8s)
+  ok 30 [security] › specs\security\access-control.spec.ts:10:3 › Access control › AC-01 employee opens /approvals: denied, sent to the dashboard @FR-10 (3.7s)
+  ok 31 [security] › specs\security\access-control.spec.ts:22:3 › Access control › AC-02 employee opens /team: denied, sent to the dashboard @FR-10 (5.9s)
+  ok 32 [security] › specs\security\access-control.spec.ts:33:3 › Access control › AC-03 employee calls the review endpoint: denied with 403 @FR-10 @BR2 (2.0s)
+  ok 33 [security] › specs\security\access-control.spec.ts:46:3 › Access control › AC-04 admin approves an employee request: allowed @FR-07 @BR2 (9.0s)
+  ok 34 [security] › specs\security\access-control.spec.ts:64:3 › Access control › AC-05 admin approves their own request: denied with 403 @FR-10 @BR2 (2.6s)
+  ok 35 [security] › specs\security\access-control.spec.ts:77:3 › Access control › AC-06 employee reads another employee's request: hidden with 404 @FR-12 (2.4s)
+  ok 36 [security] › specs\security\access-control.spec.ts:90:3 › Access control › AC-07 employee cancels their own pending request: allowed @FR-11 (1.8s)
+  ok 37 [security] › specs\security\access-control.spec.ts:103:3 › Access control › AC-08 employee cancels another employee's request: denied with 403 @FR-11 @FR-12 (2.8s)
+  ok 38 [security] › specs\security\access-control.spec.ts:116:3 › Access control › AC-09 employee reads another employee's balances: denied with 403 @FR-12 (1.8s)
+  ok 39 [security] › specs\security\access-control.spec.ts:127:3 › Access control › AC-10 employee calls the admin team endpoint: denied with 403 @FR-10 (1.2s)
+  ok 40 [security] › specs\security\access-control.spec.ts:137:3 › Access control › AC-11 no session: the browser is sent to /login @FR-12 (4.5s)
+  ok 41 [security] › specs\security\access-control.spec.ts:147:3 › Access control › AC-12 no token: the API answers 401 @FR-12 (116ms)
+  ok 42 [security] › specs\security\access-control.spec.ts:157:3 › Access control › AC-13 admin opens /approvals: allowed @FR-10 (5.0s)
+
+
+  1) [usability] › specs\usability\usability.spec.ts:41:3 › Usability › U-01 apply task: rejected value, correction, success @FR-01 @FR-05 @BR1 
+
+    Error: locator.click: Error: strict mode violation: getByRole('link', { name: 'My leave' }) resolved to 2 elements:
+        1) <a href="/leave" class="topnav__link ">…</a> aka getByRole('link', { name: 'My leave', exact: true })
+        2) <a href="/leave" class="btn btn--ghost-light">View my leave</a> aka getByRole('link', { name: 'View my leave' })
+
+    Call log:
+      - waiting for getByRole('link', { name: 'My leave' })
+
+
+      50 |     await expect(page.getByRole('heading', { level: 1 })).toContainText('Ananya');
+      51 |
+    > 52 |     await page.getByRole('link', { name: 'My leave' }).click();
+         |                                                        ^
+      53 |     await page.getByRole('button', { name: 'Request leave' }).click();
+      54 |
+      55 |     // 13 casual days against a balance of 12
+        at C:\Users\Ibrahim\Desktop\SQE_PROJETG\repo\tests\team\e2e\specs\usability\usability.spec.ts:52:56
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    reports\artifacts\usability-usability-Usabil-934ed-ed-value-correction-success-usability\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: reports\artifacts\usability-usability-Usabil-934ed-ed-value-correction-success-usability\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    reports\artifacts\usability-usability-Usabil-934ed-ed-value-correction-success-usability\trace.zip
+    Usage:
+
+        npx playwright show-trace reports\artifacts\usability-usability-Usabil-934ed-ed-value-correction-success-usability\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [usability] › specs\usability\usability.spec.ts:92:3 › Usability › U-03 keyboard: tab order through the apply form, submit with Enter @FR-01 
+
+    Error: expect(received).toHaveLength(expected)
+
+    Expected length: 1
+    Received length: 0
+    Received array:  []
+
+      120 |     await api.trackByDates('employee', w.start, w.end);
+      121 |     const saved = await api.find('employee', w.start, w.end);
+    > 122 |     expect(saved).toHaveLength(1);
+          |                   ^
+      123 |     expect(saved[0]).toMatchObject({ status: 'pending', days: 2 });
+      124 |   });
+      125 |
+        at C:\Users\Ibrahim\Desktop\SQE_PROJETG\repo\tests\team\e2e\specs\usability\usability.spec.ts:122:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    reports\artifacts\usability-usability-Usabil-966e9-pply-form-submit-with-Enter-usability\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: reports\artifacts\usability-usability-Usabil-966e9-pply-form-submit-with-Enter-usability\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    reports\artifacts\usability-usability-Usabil-966e9-pply-form-submit-with-Enter-usability\trace.zip
+    Usage:
+
+        npx playwright show-trace reports\artifacts\usability-usability-Usabil-966e9-pply-form-submit-with-Enter-usability\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [usability] › specs\usability\usability.spec.ts:41:3 › Usability › U-01 apply task: rejected value, correction, success @FR-01 @FR-05 @BR1 
+    [usability] › specs\usability\usability.spec.ts:92:3 › Usability › U-03 keyboard: tab order through the apply form, submit with Enter @FR-01 
+  40 passed (7.7m)

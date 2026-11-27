@@ -1,0 +1,52 @@
+{
+  "phase": "after",
+  "lighthouseVersion": "12.8.2",
+  "chrome": "159.0.8154.6",
+  "screens": {
+    "login": {
+      "url": "http://localhost:5173/login",
+      "scores": {
+        "accessibility": 95,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "failed": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "items": [
+            "<span class=\"avatar avatar--sm avatar--plum\" aria-hidden=\"true\">",
+            "<span class=\"avatar avatar--sm avatar--ink\" aria-hidden=\"true\">"
+          ]
+        }
+      ]
+    },
+    "my-leave": {
+      "url": "http://localhost:5173/leave",
+      "scores": {
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "failed": []
+    },
+    "apply-dialog": {
+      "url": "http://localhost:5173/leave",
+      "scores": {
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "failed": []
+    },
+    "approvals": {
+      "url": "http://localhost:5173/approvals",
+      "scores": {
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "failed": []
+    }
+  }
+}

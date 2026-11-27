@@ -1,0 +1,7 @@
+{
+  "request": "POST http://localhost:5001/api/leave-requests/54/review",
+  "status": 403,
+  "body": {
+    "message": "You cannot review your own leave request."
+  }
+}

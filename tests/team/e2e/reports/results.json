@@ -1,0 +1,2070 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=use-cases",
+      "--project=usability",
+      "--project=security"
+    ],
+    "configFile": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\playwright.config.ts",
+    "rootDir": "C:/Users/Ibrahim/Desktop/SQE_PROJETG/repo/tests/team/e2e/specs",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ibrahim/Desktop/SQE_PROJETG/repo/tests/team/e2e/reports/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "use-cases",
+        "name": "use-cases",
+        "testDir": "C:/Users/Ibrahim/Desktop/SQE_PROJETG/repo/tests/team/e2e/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "use-cases/**/*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/Ibrahim/Desktop/SQE_PROJETG/repo/tests/team/e2e/reports/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "usability",
+        "name": "usability",
+        "testDir": "C:/Users/Ibrahim/Desktop/SQE_PROJETG/repo/tests/team/e2e/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "usability/**/*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/Ibrahim/Desktop/SQE_PROJETG/repo/tests/team/e2e/reports/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "accessibility",
+        "name": "accessibility",
+        "testDir": "C:/Users/Ibrahim/Desktop/SQE_PROJETG/repo/tests/team/e2e/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/Ibrahim/Desktop/SQE_PROJETG/repo/tests/team/e2e/reports/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "security",
+        "name": "security",
+        "testDir": "C:/Users/Ibrahim/Desktop/SQE_PROJETG/repo/tests/team/e2e/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "security/**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\reports\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "use-cases",
+        "testDir": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs",
+        "snapshotDir": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs",
+        "testIgnore": [],
+        "testMatch": "use-cases/**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/159.0.8154.6 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "baseURL": "http://localhost:5173",
+          "locale": "en-US",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--lang=en-US"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "use-cases"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\reports\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "usability",
+        "testDir": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs",
+        "snapshotDir": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs",
+        "testIgnore": [],
+        "testMatch": "usability/**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/159.0.8154.6 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "baseURL": "http://localhost:5173",
+          "locale": "en-US",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--lang=en-US"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "usability"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\reports\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "security",
+        "testDir": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs",
+        "snapshotDir": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs",
+        "testIgnore": [],
+        "testMatch": "security/**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/159.0.8154.6 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "baseURL": "http://localhost:5173",
+          "locale": "en-US",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--lang=en-US"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "security"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "use-cases\\uc01-apply-leave.spec.ts",
+      "file": "use-cases/uc01-apply-leave.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "UC-01 Apply for leave",
+          "file": "use-cases/uc01-apply-leave.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UC-01-M1 main: apply for 2 casual days",
+              "ok": true,
+              "tags": [
+                "FR-01",
+                "FR-02",
+                "BR1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15332,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:25:10.708Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "41693e0eb71a8151b981-0c143d0ecdde0bed2ee7",
+              "file": "use-cases/uc01-apply-leave.spec.ts",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "UC-01-A1 alternative: another leave type (earned)",
+              "ok": true,
+              "tags": [
+                "FR-01"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8694,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:25:26.690Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "41693e0eb71a8151b981-cc89e33237c107607a12",
+              "file": "use-cases/uc01-apply-leave.spec.ts",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "UC-01-A2 alternative: a range over a weekend counts weekdays only",
+              "ok": true,
+              "tags": [
+                "FR-01",
+                "BR1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10788,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:25:35.460Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "41693e0eb71a8151b981-28c2810a0d71a9e40930",
+              "file": "use-cases/uc01-apply-leave.spec.ts",
+              "line": 47,
+              "column": 3
+            },
+            {
+              "title": "UC-01-A3 alternative: open the form from the \"Plan a break\" link",
+              "ok": true,
+              "tags": [
+                "FR-01"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9308,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:25:46.301Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "41693e0eb71a8151b981-945ed26ed20e1bb47298",
+              "file": "use-cases/uc01-apply-leave.spec.ts",
+              "line": 60,
+              "column": 3
+            },
+            {
+              "title": "UC-01-E1 exception: end date before start date",
+              "ok": true,
+              "tags": [
+                "FR-03"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8564,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:25:55.656Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "41693e0eb71a8151b981-c12e2937f827c12cd3a0",
+              "file": "use-cases/uc01-apply-leave.spec.ts",
+              "line": 74,
+              "column": 3
+            },
+            {
+              "title": "UC-01-E2 exception: reason shorter than 10 characters",
+              "ok": true,
+              "tags": [
+                "FR-02"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8714,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:26:04.262Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "41693e0eb71a8151b981-625771f6a4a48778915e",
+              "file": "use-cases/uc01-apply-leave.spec.ts",
+              "line": 85,
+              "column": 3
+            },
+            {
+              "title": "UC-01-E3 exception: more days than the balance",
+              "ok": true,
+              "tags": [
+                "FR-05",
+                "BR1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7621,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:26:13.035Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "41693e0eb71a8151b981-878f3eb28c8fd7c62bd2",
+              "file": "use-cases/uc01-apply-leave.spec.ts",
+              "line": 95,
+              "column": 3
+            },
+            {
+              "title": "UC-01-E4 exception: dates overlap an existing request",
+              "ok": true,
+              "tags": [
+                "FR-04",
+                "BR4"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8707,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:26:20.711Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "41693e0eb71a8151b981-b316f7b59703d0521b70",
+              "file": "use-cases/uc01-apply-leave.spec.ts",
+              "line": 106,
+              "column": 3
+            },
+            {
+              "title": "UC-01-E5 exception: start date in the past",
+              "ok": true,
+              "tags": [
+                "FR-03"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10090,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:26:29.462Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "41693e0eb71a8151b981-55187c8d0ce08a2048bf",
+              "file": "use-cases/uc01-apply-leave.spec.ts",
+              "line": 118,
+              "column": 3
+            },
+            {
+              "title": "UC-01-D1 known defect: the balance hint uses the year of the chosen dates",
+              "ok": true,
+              "tags": [
+                "FR-05"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "fail",
+                      "description": "DEF-A3-01: hint shows this year's balance for a request in another year",
+                      "location": {
+                        "file": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc01-apply-leave.spec.ts",
+                        "line": 133,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "failed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 24410,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/needs 13 days, but you only have 12 days/)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/needs 13 days, but you only have 12 days/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/needs 13 days, but you only have 12 days/)\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/needs 13 days, but you only have 12 days/)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/needs 13 days, but you only have 12 days/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/needs 13 days, but you only have 12 days/)\u001b[22m\n\n    at C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc01-apply-leave.spec.ts:137:78",
+                        "location": {
+                          "file": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc01-apply-leave.spec.ts",
+                          "column": 78,
+                          "line": 137
+                        },
+                        "snippet": " \u001b[90m 135 |\u001b[39m     \u001b[36mawait\u001b[39m openApplyDialog(page)\u001b[33m;\u001b[39m\n \u001b[90m 136 |\u001b[39m     \u001b[36mawait\u001b[39m fillApplyForm(page\u001b[33m,\u001b[39m { type\u001b[33m:\u001b[39m \u001b[32m'Casual'\u001b[39m\u001b[33m,\u001b[39m start\u001b[33m:\u001b[39m w\u001b[33m.\u001b[39mstart\u001b[33m,\u001b[39m end\u001b[33m:\u001b[39m w\u001b[33m.\u001b[39mend\u001b[33m,\u001b[39m reason\u001b[33m:\u001b[39m \u001b[33mREASON\u001b[39m \u001b[33m+\u001b[39m \u001b[32m' D1'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 137 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/needs 13 days, but you only have 12 days/\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 138 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 139 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 140 |\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc01-apply-leave.spec.ts",
+                            "column": 78,
+                            "line": 137
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/needs 13 days, but you only have 12 days/)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/needs 13 days, but you only have 12 days/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/needs 13 days, but you only have 12 days/)\u001b[22m\n\n\n  135 |     await openApplyDialog(page);\n  136 |     await fillApplyForm(page, { type: 'Casual', start: w.start, end: w.end, reason: REASON + ' D1' });\n> 137 |     await expect(page.getByText(/needs 13 days, but you only have 12 days/)).toBeVisible();\n      |                                                                              ^\n  138 |   });\n  139 | });\n  140 |\n    at C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc01-apply-leave.spec.ts:137:78"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:26:39.599Z",
+                      "annotations": [
+                        {
+                          "type": "fail",
+                          "description": "DEF-A3-01: hint shows this year's balance for a request in another year",
+                          "location": {
+                            "file": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc01-apply-leave.spec.ts",
+                            "line": 133,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\reports\\artifacts\\use-cases-uc01-apply-leave-8de7f-he-year-of-the-chosen-dates-use-cases\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc01-apply-leave.spec.ts",
+                        "column": 78,
+                        "line": 137
+                      }
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "41693e0eb71a8151b981-8b98788ce3bc0f98db31",
+              "file": "use-cases/uc01-apply-leave.spec.ts",
+              "line": 132,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "use-cases\\uc02-review-leave.spec.ts",
+      "file": "use-cases/uc02-review-leave.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "UC-02 Review a leave request",
+          "file": "use-cases/uc02-review-leave.spec.ts",
+          "line": 17,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UC-02-M1 main: approve with a note",
+              "ok": true,
+              "tags": [
+                "FR-07",
+                "BR2",
+                "BR3"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 19865,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:27:04.115Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "480a45ae0ea96982987a-f82566236af9281fc277",
+              "file": "use-cases/uc02-review-leave.spec.ts",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "UC-02-A1 alternative: approve without a note",
+              "ok": true,
+              "tags": [
+                "FR-07"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10851,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:27:24.210Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "480a45ae0ea96982987a-b87472e4a818f14f9762",
+              "file": "use-cases/uc02-review-leave.spec.ts",
+              "line": 41,
+              "column": 3
+            },
+            {
+              "title": "UC-02-A2 alternative: reject with a note, balance unchanged",
+              "ok": true,
+              "tags": [
+                "FR-08",
+                "BR3"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10355,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:27:35.108Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "480a45ae0ea96982987a-a2db3da295b4defa6165",
+              "file": "use-cases/uc02-review-leave.spec.ts",
+              "line": 55,
+              "column": 3
+            },
+            {
+              "title": "UC-02-A3 alternative: the decided request moves to the Approved tab",
+              "ok": true,
+              "tags": [
+                "FR-07"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16625,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:27:45.499Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "480a45ae0ea96982987a-2a6a3f0d33e3f62e57e9",
+              "file": "use-cases/uc02-review-leave.spec.ts",
+              "line": 72,
+              "column": 3
+            },
+            {
+              "title": "UC-02-E1 exception: reject without a note",
+              "ok": true,
+              "tags": [
+                "FR-08",
+                "BR2"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12247,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:28:02.165Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "480a45ae0ea96982987a-e5b48e835109d5043b73",
+              "file": "use-cases/uc02-review-leave.spec.ts",
+              "line": 87,
+              "column": 3
+            },
+            {
+              "title": "UC-02-E2 exception: approval would exceed the balance",
+              "ok": true,
+              "tags": [
+                "FR-09",
+                "BR1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13974,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:28:14.466Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "480a45ae0ea96982987a-23de167ee5f6c48d4472",
+              "file": "use-cases/uc02-review-leave.spec.ts",
+              "line": 99,
+              "column": 3
+            },
+            {
+              "title": "UC-02-D1 known defect: the dialog warns when the request year has too few days left",
+              "ok": true,
+              "tags": [
+                "FR-09"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "fail",
+                      "description": "DEF-A3-01: review dialog uses this year's balance",
+                      "location": {
+                        "file": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc02-review-leave.spec.ts",
+                        "line": 123,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "failed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 29712,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'Review leave request' }).getByText(/needs 8 days, but only 4 days remain/)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog', { name: 'Review leave request' }).getByText(/needs 8 days, but only 4 days remain/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Review leave request' }).getByText(/needs 8 days, but only 4 days remain/)\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'Review leave request' }).getByText(/needs 8 days, but only 4 days remain/)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog', { name: 'Review leave request' }).getByText(/needs 8 days, but only 4 days remain/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Review leave request' }).getByText(/needs 8 days, but only 4 days remain/)\u001b[22m\n\n    at C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc02-review-leave.spec.ts:133:76",
+                        "location": {
+                          "file": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc02-review-leave.spec.ts",
+                          "column": 76,
+                          "line": 133
+                        },
+                        "snippet": " \u001b[90m 131 |\u001b[39m\n \u001b[90m 132 |\u001b[39m     \u001b[36mconst\u001b[39m dialog \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m openReview(page\u001b[33m,\u001b[39m \u001b[32m'UC-02 D1 second eight days'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 133 |\u001b[39m     \u001b[36mawait\u001b[39m expect(dialog\u001b[33m.\u001b[39mgetByText(\u001b[35m/needs 8 days, but only 4 days remain/\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 134 |\u001b[39m     \u001b[36mawait\u001b[39m expect(dialog\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Approve'\u001b[39m }))\u001b[33m.\u001b[39mtoBeDisabled()\u001b[33m;\u001b[39m\n \u001b[90m 135 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 136 |\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc02-review-leave.spec.ts",
+                            "column": 76,
+                            "line": 133
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'Review leave request' }).getByText(/needs 8 days, but only 4 days remain/)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog', { name: 'Review leave request' }).getByText(/needs 8 days, but only 4 days remain/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Review leave request' }).getByText(/needs 8 days, but only 4 days remain/)\u001b[22m\n\n\n  131 |\n  132 |     const dialog = await openReview(page, 'UC-02 D1 second eight days');\n> 133 |     await expect(dialog.getByText(/needs 8 days, but only 4 days remain/)).toBeVisible();\n      |                                                                            ^\n  134 |     await expect(dialog.getByRole('button', { name: 'Approve' })).toBeDisabled();\n  135 |   });\n  136 |\n    at C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc02-review-leave.spec.ts:133:76"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:28:28.496Z",
+                      "annotations": [
+                        {
+                          "type": "fail",
+                          "description": "DEF-A3-01: review dialog uses this year's balance",
+                          "location": {
+                            "file": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc02-review-leave.spec.ts",
+                            "line": 123,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\reports\\artifacts\\use-cases-uc02-review-leav-ca1df--year-has-too-few-days-left-use-cases\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Ibrahim\\Desktop\\SQE_PROJETG\\repo\\tests\\team\\e2e\\specs\\use-cases\\uc02-review-leave.spec.ts",
+                        "column": 76,
+                        "line": 133
+                      }
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "480a45ae0ea96982987a-2fcaf26ebbcbdd83b5ca",
+              "file": "use-cases/uc02-review-leave.spec.ts",
+              "line": 122,
+              "column": 3
+            },
+            {
+              "title": "UC-02-E3 exception: the request was already decided",
+              "ok": true,
+              "tags": [
+                "FR-10",
+                "BR3"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11048,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:28:58.298Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "480a45ae0ea96982987a-69ba6a854a1f82fdd802",
+              "file": "use-cases/uc02-review-leave.spec.ts",
+              "line": 137,
+              "column": 3
+            },
+            {
+              "title": "UC-02-E4 exception: an admin cannot review their own request",
+              "ok": true,
+              "tags": [
+                "FR-10",
+                "BR2"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12529,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:29:09.405Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "480a45ae0ea96982987a-c656658d1d848660438f",
+              "file": "use-cases/uc02-review-leave.spec.ts",
+              "line": 151,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "use-cases\\uc03-cancel-leave.spec.ts",
+      "file": "use-cases/uc03-cancel-leave.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "UC-03 Cancel leave",
+          "file": "use-cases/uc03-cancel-leave.spec.ts",
+          "line": 17,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UC-03-M1 main: withdraw a pending request",
+              "ok": true,
+              "tags": [
+                "FR-11",
+                "BR3"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9273,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:29:21.999Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c72916b78cf1d0de8a2f-0fcd78e44230c3953a65",
+              "file": "use-cases/uc03-cancel-leave.spec.ts",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "UC-03-A1 alternative: cancel approved leave, days return",
+              "ok": true,
+              "tags": [
+                "FR-11",
+                "BR3"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10167,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:29:31.320Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c72916b78cf1d0de8a2f-94e68521a274277fe180",
+              "file": "use-cases/uc03-cancel-leave.spec.ts",
+              "line": 35,
+              "column": 3
+            },
+            {
+              "title": "UC-03-A2 alternative: \"Keep it\" leaves the request unchanged",
+              "ok": true,
+              "tags": [
+                "FR-11"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7880,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:29:41.526Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c72916b78cf1d0de8a2f-4c97e8cd125e62d1fce3",
+              "file": "use-cases/uc03-cancel-leave.spec.ts",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "UC-03-E1 exception: leave that already started",
+              "ok": true,
+              "tags": [
+                "FR-11",
+                "BR3"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6696,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:29:49.466Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c72916b78cf1d0de8a2f-58c4b283b6ed05fafc49",
+              "file": "use-cases/uc03-cancel-leave.spec.ts",
+              "line": 62,
+              "column": 3
+            },
+            {
+              "title": "UC-03-E2 exception: a rejected request cannot be cancelled",
+              "ok": true,
+              "tags": [
+                "FR-11",
+                "BR3"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "use-cases",
+                  "projectName": "use-cases",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10917,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:29:56.213Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c72916b78cf1d0de8a2f-a3d43a41082449ba7e19",
+              "file": "use-cases/uc03-cancel-leave.spec.ts",
+              "line": 78,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "usability\\usability.spec.ts",
+      "file": "usability/usability.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Usability",
+          "file": "usability/usability.spec.ts",
+          "line": 57,
+          "column": 6,
+          "specs": [
+            {
+              "title": "U-01 apply task: rejected value, correction, success",
+              "ok": true,
+              "tags": [
+                "FR-01",
+                "FR-05",
+                "BR1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "usability",
+                  "projectName": "usability",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13121,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:30:26.443Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e30b85a79d31789685fe-b2166ec3ce0c370eb2dd",
+              "file": "usability/usability.spec.ts",
+              "line": 58,
+              "column": 3
+            },
+            {
+              "title": "U-02 review task: admin approves and sees the confirmation",
+              "ok": true,
+              "tags": [
+                "FR-07"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "usability",
+                  "projectName": "usability",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9827,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:30:40.298Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e30b85a79d31789685fe-4fb2fa6846888be6a90d",
+              "file": "usability/usability.spec.ts",
+              "line": 92,
+              "column": 3
+            },
+            {
+              "title": "U-03 keyboard: tab order through the apply form, submit with Enter",
+              "ok": true,
+              "tags": [
+                "FR-01"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "usability",
+                  "projectName": "usability",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 17664,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:30:50.163Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e30b85a79d31789685fe-f064bb2ed7d44b152c16",
+              "file": "usability/usability.spec.ts",
+              "line": 109,
+              "column": 3
+            },
+            {
+              "title": "U-04 focus moves into the dialog when it opens",
+              "ok": true,
+              "tags": [
+                "FR-01"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "usability",
+                  "projectName": "usability",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5244,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:31:07.893Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e30b85a79d31789685fe-95124e6bd44c8e789b58",
+              "file": "usability/usability.spec.ts",
+              "line": 147,
+              "column": 3
+            },
+            {
+              "title": "U-05 Tab stays inside the open dialog",
+              "ok": true,
+              "tags": [
+                "FR-01"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "usability",
+                  "projectName": "usability",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6811,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:31:13.195Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e30b85a79d31789685fe-8015ce2430b40c0106aa",
+              "file": "usability/usability.spec.ts",
+              "line": 155,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "security\\access-control.spec.ts",
+      "file": "security/access-control.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Access control",
+          "file": "security/access-control.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-01 employee opens /approvals: denied, sent to the dashboard",
+              "ok": true,
+              "tags": [
+                "FR-10"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5783,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:31:30.521Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-06241210ba6520089064",
+              "file": "security/access-control.spec.ts",
+              "line": 10,
+              "column": 3
+            },
+            {
+              "title": "AC-02 employee opens /team: denied, sent to the dashboard",
+              "ok": true,
+              "tags": [
+                "FR-10"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6607,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:31:37.716Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-510ceee7fa45715e4727",
+              "file": "security/access-control.spec.ts",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "AC-03 employee calls the review endpoint: denied with 403",
+              "ok": true,
+              "tags": [
+                "FR-10",
+                "BR2"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2782,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:31:44.400Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-7ddf6be6ef320bd2afac",
+              "file": "security/access-control.spec.ts",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "AC-04 admin approves an employee request: allowed",
+              "ok": true,
+              "tags": [
+                "FR-07",
+                "BR2"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9118,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:31:47.228Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-1e16ed9e07b16975ef79",
+              "file": "security/access-control.spec.ts",
+              "line": 46,
+              "column": 3
+            },
+            {
+              "title": "AC-05 admin approves their own request: denied with 403",
+              "ok": true,
+              "tags": [
+                "FR-10",
+                "BR2"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3422,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:31:56.389Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-ee677ee611f621c9257b",
+              "file": "security/access-control.spec.ts",
+              "line": 64,
+              "column": 3
+            },
+            {
+              "title": "AC-06 employee reads another employee's request: hidden with 404",
+              "ok": true,
+              "tags": [
+                "FR-12"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2846,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:31:59.871Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-adfca7d249cc05a4894d",
+              "file": "security/access-control.spec.ts",
+              "line": 77,
+              "column": 3
+            },
+            {
+              "title": "AC-07 employee cancels their own pending request: allowed",
+              "ok": true,
+              "tags": [
+                "FR-11"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1875,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:32:02.754Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-f35f8fe18f55ad5cd76c",
+              "file": "security/access-control.spec.ts",
+              "line": 90,
+              "column": 3
+            },
+            {
+              "title": "AC-08 employee cancels another employee's request: denied with 403",
+              "ok": true,
+              "tags": [
+                "FR-11",
+                "FR-12"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2379,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:32:04.710Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-c93b9ee9d4c91d610a04",
+              "file": "security/access-control.spec.ts",
+              "line": 103,
+              "column": 3
+            },
+            {
+              "title": "AC-09 employee reads another employee's balances: denied with 403",
+              "ok": true,
+              "tags": [
+                "FR-12"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2289,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:32:07.155Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-8ca239a9be82e0dcf830",
+              "file": "security/access-control.spec.ts",
+              "line": 116,
+              "column": 3
+            },
+            {
+              "title": "AC-10 employee calls the admin team endpoint: denied with 403",
+              "ok": true,
+              "tags": [
+                "FR-10"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1203,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:32:09.567Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-32eab8864cf764939ba3",
+              "file": "security/access-control.spec.ts",
+              "line": 127,
+              "column": 3
+            },
+            {
+              "title": "AC-11 no session: the browser is sent to /login",
+              "ok": true,
+              "tags": [
+                "FR-12"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3752,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:32:10.819Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-8cbcc9c0d0a206366c7b",
+              "file": "security/access-control.spec.ts",
+              "line": 137,
+              "column": 3
+            },
+            {
+              "title": "AC-12 no token: the API answers 401",
+              "ok": true,
+              "tags": [
+                "FR-12"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 219,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:32:14.607Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-aeceb5d39f928cc8e750",
+              "file": "security/access-control.spec.ts",
+              "line": 147,
+              "column": 3
+            },
+            {
+              "title": "AC-13 admin opens /approvals: allowed",
+              "ok": true,
+              "tags": [
+                "FR-10"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6798,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:32:14.862Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c40b5024521d16d47650-ae58a652f9da88f41a6e",
+              "file": "security/access-control.spec.ts",
+              "line": 157,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "security\\passive-controls.spec.ts",
+      "file": "security/passive-controls.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Passive security controls",
+          "file": "security/passive-controls.spec.ts",
+          "line": 20,
+          "column": 6,
+          "specs": [
+            {
+              "title": "PC-01 security headers and cookies on the UI and API responses",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8914,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:32:21.759Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0fc765a4ae207eee0dc3-844b63dd0deec35a8a92",
+              "file": "security/passive-controls.spec.ts",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "PC-02 CORS: a foreign origin gets no permission headers",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "security",
+                  "projectName": "security",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1504,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T17:32:30.716Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0fc765a4ae207eee0dc3-5a0285f35794ab598ef9",
+              "file": "security/passive-controls.spec.ts",
+              "line": 61,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-24T17:25:05.644Z",
+    "duration": 453344.553,
+    "expected": 44,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

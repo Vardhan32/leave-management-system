@@ -1,0 +1,475 @@
+openapi: 3.0.3
+info:
+  title: LeaveDesk API (workflows under test)
+  version: "1.0.0-team"
+  description: |
+    Hand-written specification of the LeaveDesk endpoints used by the two
+    workflows under test:
+
+      W1  Apply for leave      POST /api/leave-requests
+      W2  Review leave request POST /api/leave-requests/{id}/review
+                               (and cancellation, which shares the state machine)
+
+    Shared records: LeaveRequest.status (W1 creates "pending", W2 changes it)
+    and LeaveBalance.used_days (W2 adds to it on approval, W1 reads the
+    remaining balance before accepting a request, cancel gives days back).
+
+    The spec was written from the upstream source at the baseline commit
+    (backend/app/api/*.py, services.py, utils.py) and the README. It describes
+    the API as it behaves, not as we would like it to behave. Where the two
+    differ, the difference is listed in reports/endpoint_weaknesses.md.
+
+    Vendor extensions (x-...) carry constraints that plain JSON Schema cannot
+    express. The test data generator (generator/generate_cases.py) reads them.
+servers:
+  - url: http://localhost:5001
+
+x-business-rules:
+  # Read by the generator to produce boundary values for the balance rule.
+  balance-limit:
+    rule: BR1
+    description: >
+      The working days in a request must not exceed the remaining balance of
+      that leave type for the year. Checked on submission and again on approval.
+    allocations:
+      CASUAL: 12
+      SICK: 10
+      EARNED: 15
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  responses:
+    Unauthorized:
+      description: Missing, invalid or expired token.
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/Message"}
+    ValidationFailed:
+      description: One or more fields failed validation.
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/ValidationError"}
+    BadRequest:
+      description: Body is not a JSON object, or a query value is not a whole number.
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/Message"}
+    Forbidden:
+      description: The signed-in user is not allowed to perform the action.
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/Message"}
+    NotFound:
+      description: The record does not exist or is not visible to the user.
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/Message"}
+    Conflict:
+      description: The request is not in a state that allows this change.
+      content:
+        application/json:
+          schema: {$ref: "#/components/schemas/Message"}
+
+  schemas:
+    Message:
+      type: object
+      required: [message]
+      properties:
+        message: {type: string}
+
+    ValidationError:
+      type: object
+      required: [message, errors]
+      properties:
+        message: {type: string}
+        errors:
+          type: object
+          description: Field name mapped to a readable message.
+
+    User:
+      type: object
+      required: [id, name, email, role]
+      properties:
+        id: {type: integer}
+        name: {type: string}
+        email: {type: string}
+        role: {type: string, enum: [employee, admin]}
+        department: {type: string, nullable: true}
+        job_title: {type: string, nullable: true}
+        joined_on: {type: string, nullable: true}
+        created_at: {type: string}
+
+    LeaveType:
+      type: object
+      required: [id, code, name, default_days]
+      properties:
+        id: {type: integer}
+        code: {type: string, enum: [CASUAL, SICK, EARNED]}
+        name: {type: string}
+        default_days: {type: integer}
+        description: {type: string, nullable: true}
+
+    LeaveBalance:
+      type: object
+      required: [id, user_id, year, leave_type, allocated_days, used_days, remaining_days]
+      properties:
+        id: {type: integer}
+        user_id: {type: integer}
+        year: {type: integer}
+        leave_type: {$ref: "#/components/schemas/LeaveType"}
+        allocated_days: {type: integer}
+        used_days: {type: integer}
+        remaining_days: {type: integer}
+
+    LeaveRequest:
+      type: object
+      required: [id, employee, leave_type, start_date, end_date, days, reason, status]
+      properties:
+        id: {type: integer}
+        employee: {$ref: "#/components/schemas/User"}
+        leave_type: {$ref: "#/components/schemas/LeaveType"}
+        start_date: {type: string}
+        end_date: {type: string}
+        days: {type: integer}
+        reason: {type: string}
+        status: {type: string, enum: [pending, approved, rejected, cancelled]}
+        reviewed_by:
+          type: object
+          nullable: true
+          properties:
+            id: {type: integer}
+            name: {type: string}
+        reviewed_at: {type: string, nullable: true}
+        review_note: {type: string, nullable: true}
+        created_at: {type: string}
+        updated_at: {type: string}
+
+    LeaveRequestPage:
+      type: object
+      required: [items, page, per_page, total, pages, has_next, has_prev]
+      properties:
+        items:
+          type: array
+          items: {$ref: "#/components/schemas/LeaveRequest"}
+        page: {type: integer}
+        per_page: {type: integer}
+        total: {type: integer}
+        pages: {type: integer}
+        has_next: {type: boolean}
+        has_prev: {type: boolean}
+
+    LoginInput:
+      type: object
+      required: [email, password]
+      properties:
+        email:
+          type: string
+          maxLength: 255
+          example: demo@leavedesk.in
+          x-trimmed: true
+          # any value that passes validation but is not the registered email
+          # gets "Incorrect email or password"
+          x-valid-status: 401
+        password:
+          type: string
+          example: password123
+          description: Not trimmed or length-checked on login, only on registration.
+          # login() calls str(password) instead of rejecting other types,
+          # so a number is compared as text and fails with 401, not 422
+          x-nonstring-status: 401
+          x-valid-status: 401
+
+    LeaveRequestInput:
+      type: object
+      required: [leave_type_id, start_date, end_date, reason]
+      properties:
+        leave_type_id:
+          type: integer
+          minimum: 1
+          example: 1
+          # ids 1..3 exist after seeding the three standard types; anything
+          # above passes validation but the lookup returns 404
+          x-lookup-max: 3
+        start_date:
+          type: string
+          format: date
+          example: "{next_working_monday}"
+          # BR: leave cannot start in the past (start >= today)
+          x-min-relative: today
+        end_date:
+          type: string
+          format: date
+          example: "{next_working_monday+2}"
+          # end >= start; the same-calendar-year rule is checked in the tests
+          x-min-field: start_date
+        reason:
+          type: string
+          minLength: 10
+          maxLength: 500
+          example: "Family event and travel arrangements."
+          x-trimmed: true
+
+    ReviewInput:
+      type: object
+      required: [decision]
+      properties:
+        decision:
+          type: string
+          enum: [approve, reject]
+          maxLength: 20
+          example: approve
+          x-trimmed: true
+        note:
+          type: string
+          maxLength: 500
+          example: "Enjoy the break."
+          x-trimmed: true
+          description: Required when decision is "reject" (BR2, checked in tests).
+
+security:
+  - bearerAuth: []
+
+paths:
+  /api/health:
+    get:
+      operationId: health
+      security: []
+      responses:
+        "200":
+          description: Service is up.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status]
+                properties:
+                  status: {type: string}
+
+  /api/auth/login:
+    post:
+      operationId: login
+      security: []
+      x-invalid-status: 422
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: "#/components/schemas/LoginInput"}
+      responses:
+        "200":
+          description: Signed in.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [user, access_token]
+                properties:
+                  user: {$ref: "#/components/schemas/User"}
+                  access_token: {type: string}
+        "400": {$ref: "#/components/responses/BadRequest"}
+        "401":
+          description: Wrong email or password.
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/Message"}
+        "422": {$ref: "#/components/responses/ValidationFailed"}
+
+  /api/auth/me:
+    get:
+      operationId: me
+      responses:
+        "200":
+          description: Current user.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [user]
+                properties:
+                  user: {$ref: "#/components/schemas/User"}
+        "401": {$ref: "#/components/responses/Unauthorized"}
+
+  /api/leave-types:
+    get:
+      operationId: listLeaveTypes
+      responses:
+        "200":
+          description: Configured leave types.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [leave_types]
+                properties:
+                  leave_types:
+                    type: array
+                    items: {$ref: "#/components/schemas/LeaveType"}
+        "401": {$ref: "#/components/responses/Unauthorized"}
+
+  /api/leave-balances:
+    get:
+      operationId: listBalances
+      x-invalid-status: 400
+      parameters:
+        - name: year
+          in: query
+          schema: {type: integer, example: 2027}
+        - name: user_id
+          in: query
+          description: Admins only; employees get 403 for anyone but themselves.
+          schema: {type: integer, example: "{self_id}"}
+      responses:
+        "200":
+          description: Balances for the target user and year.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [user, year, balances]
+                properties:
+                  user: {$ref: "#/components/schemas/User"}
+                  year: {type: integer}
+                  balances:
+                    type: array
+                    items: {$ref: "#/components/schemas/LeaveBalance"}
+        "400": {$ref: "#/components/responses/BadRequest"}
+        "401": {$ref: "#/components/responses/Unauthorized"}
+        "403": {$ref: "#/components/responses/Forbidden"}
+        "404": {$ref: "#/components/responses/NotFound"}
+
+  /api/leave-requests:
+    get:
+      operationId: listLeaveRequests
+      x-invalid-status: 400
+      parameters:
+        - name: status
+          in: query
+          schema: {type: string, enum: [pending, approved, rejected, cancelled], example: pending}
+        - name: leave_type_id
+          in: query
+          schema: {type: integer, example: 1}
+        - name: year
+          in: query
+          schema: {type: integer, example: 2027}
+        - name: q
+          in: query
+          description: Case-insensitive search in the reason (admins also match name and email).
+          schema: {type: string, example: wedding}
+        - name: page
+          in: query
+          description: Values below 1 are treated as 1.
+          schema: {type: integer, minimum: 1, example: 1}
+          x-clamped: true
+        - name: per_page
+          in: query
+          description: Clamped to the range 1..50.
+          schema: {type: integer, minimum: 1, maximum: 50, example: 10}
+          x-clamped: true
+        - name: user_id
+          in: query
+          description: Admin-only filter, ignored for employees.
+          schema: {type: integer, example: 1}
+          x-role: admin
+        - name: department
+          in: query
+          description: Admin-only filter, ignored for employees.
+          schema: {type: string, example: Engineering}
+          x-role: admin
+      responses:
+        "200":
+          description: One page of requests.
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/LeaveRequestPage"}
+        "400": {$ref: "#/components/responses/BadRequest"}
+        "401": {$ref: "#/components/responses/Unauthorized"}
+
+    post:
+      operationId: createLeaveRequest
+      x-workflow: W1
+      x-invalid-status: 422
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: "#/components/schemas/LeaveRequestInput"}
+      responses:
+        "201":
+          description: Request stored as pending.
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/LeaveRequest"}
+        "400": {$ref: "#/components/responses/BadRequest"}
+        "401": {$ref: "#/components/responses/Unauthorized"}
+        "404": {$ref: "#/components/responses/NotFound"}
+        "422": {$ref: "#/components/responses/ValidationFailed"}
+
+  /api/leave-requests/{id}:
+    get:
+      operationId: getLeaveRequest
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: {type: integer, minimum: 1}
+      responses:
+        "200":
+          description: The request.
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/LeaveRequest"}
+        "401": {$ref: "#/components/responses/Unauthorized"}
+        "404": {$ref: "#/components/responses/NotFound"}
+
+  /api/leave-requests/{id}/cancel:
+    post:
+      operationId: cancelLeaveRequest
+      x-workflow: W2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: {type: integer, minimum: 1}
+      responses:
+        "200":
+          description: Request cancelled; approved days are returned to the balance.
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/LeaveRequest"}
+        "401": {$ref: "#/components/responses/Unauthorized"}
+        "403": {$ref: "#/components/responses/Forbidden"}
+        "404": {$ref: "#/components/responses/NotFound"}
+        "409": {$ref: "#/components/responses/Conflict"}
+
+  /api/leave-requests/{id}/review:
+    post:
+      operationId: reviewLeaveRequest
+      x-workflow: W2
+      x-invalid-status: 422
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: {type: integer, minimum: 1}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: "#/components/schemas/ReviewInput"}
+      responses:
+        "200":
+          description: Request approved or rejected.
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/LeaveRequest"}
+        "400": {$ref: "#/components/responses/BadRequest"}
+        "401": {$ref: "#/components/responses/Unauthorized"}
+        "403": {$ref: "#/components/responses/Forbidden"}
+        "404": {$ref: "#/components/responses/NotFound"}
+        "409": {$ref: "#/components/responses/Conflict"}
+        "422": {$ref: "#/components/responses/ValidationFailed"}

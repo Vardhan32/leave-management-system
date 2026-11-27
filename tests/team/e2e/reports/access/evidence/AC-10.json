@@ -1,0 +1,7 @@
+{
+  "request": "GET http://localhost:5001/api/team",
+  "status": 403,
+  "body": {
+    "message": "Admin access is required."
+  }
+}

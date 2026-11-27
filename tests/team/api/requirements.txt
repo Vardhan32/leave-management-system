@@ -1,0 +1,4 @@
+# Area 2 test dependencies, on top of backend/requirements.txt
+-r ../../../backend/requirements.txt
+PyYAML>=6,<7
+pytest>=8,<10

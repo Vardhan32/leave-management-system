@@ -1,0 +1,415 @@
+{
+  "screen": "approvals",
+  "url": "http://localhost:5173/approvals",
+  "axeVersion": "4.14.1",
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6f7484",
+                "bgColor": "#ece4d4",
+                "contrastRatio": 3.68,
+                "fontSize": "8.6pt (11.5px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"filter-tabs\" role=\"tablist\" aria-label=\"Filter approvals by status\">",
+                  "target": [
+                    ".filter-tabs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.68 (foreground color: #6f7484, background color: #ece4d4, font size: 8.6pt (11.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" role=\"tab\" aria-selected=\"false\" class=\"filter-tab \">Approved</button>",
+          "target": [
+            ".filter-tab[role=\"tab\"]:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #6f7484, background color: #ece4d4, font size: 8.6pt (11.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6f7484",
+                "bgColor": "#ece4d4",
+                "contrastRatio": 3.68,
+                "fontSize": "8.6pt (11.5px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"filter-tabs\" role=\"tablist\" aria-label=\"Filter approvals by status\">",
+                  "target": [
+                    ".filter-tabs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.68 (foreground color: #6f7484, background color: #ece4d4, font size: 8.6pt (11.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" role=\"tab\" aria-selected=\"false\" class=\"filter-tab \">Rejected</button>",
+          "target": [
+            ".filter-tab[role=\"tab\"]:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #6f7484, background color: #ece4d4, font size: 8.6pt (11.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6f7484",
+                "bgColor": "#ece4d4",
+                "contrastRatio": 3.68,
+                "fontSize": "8.6pt (11.5px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"filter-tabs\" role=\"tablist\" aria-label=\"Filter approvals by status\">",
+                  "target": [
+                    ".filter-tabs"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.68 (foreground color: #6f7484, background color: #ece4d4, font size: 8.6pt (11.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button type=\"button\" role=\"tab\" aria-selected=\"false\" class=\"filter-tab \">Cancelled</button>",
+          "target": [
+            ".filter-tab[role=\"tab\"]:nth-child(4)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #6f7484, background color: #ece4d4, font size: 8.6pt (11.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6f7484",
+                "bgColor": "#dfe3ec",
+                "contrastRatio": 3.62,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"avatar avatar--sm avatar--ink\" aria-hidden=\"true\" title=\"Priya Deshpande\">PD</span>",
+                  "target": [
+                    ".avatar--ink"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.62 (foreground color: #6f7484, background color: #dfe3ec, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"avatar avatar--sm avatar--ink\" aria-hidden=\"true\" title=\"Priya Deshpande\">PD</span>",
+          "target": [
+            ".avatar--ink"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.62 (foreground color: #6f7484, background color: #dfe3ec, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6f7484",
+                "bgColor": "#efe1e9",
+                "contrastRatio": 3.68,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"avatar avatar--sm avatar--plum\" aria-hidden=\"true\" title=\"Sneha Kulkarni\">SK</span>",
+                  "target": [
+                    "span[title=\"Sneha Kulkarni\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.68 (foreground color: #6f7484, background color: #efe1e9, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"avatar avatar--sm avatar--plum\" aria-hidden=\"true\" title=\"Sneha Kulkarni\">SK</span>",
+          "target": [
+            "span[title=\"Sneha Kulkarni\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #6f7484, background color: #efe1e9, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6f7484",
+                "bgColor": "#dceaf1",
+                "contrastRatio": 3.78,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"avatar avatar--sm avatar--sky\" aria-hidden=\"true\" title=\"Arjun Menon\">AM</span>",
+                  "target": [
+                    "span[title=\"Arjun Menon\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.78 (foreground color: #6f7484, background color: #dceaf1, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"avatar avatar--sm avatar--sky\" aria-hidden=\"true\" title=\"Arjun Menon\">AM</span>",
+          "target": [
+            "span[title=\"Arjun Menon\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #6f7484, background color: #dceaf1, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6f7484",
+                "bgColor": "#efe1e9",
+                "contrastRatio": 3.68,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"avatar avatar--sm avatar--plum\" aria-hidden=\"true\" title=\"Isha Verma\">IV</span>",
+                  "target": [
+                    "span[title=\"Isha Verma\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.68 (foreground color: #6f7484, background color: #efe1e9, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"avatar avatar--sm avatar--plum\" aria-hidden=\"true\" title=\"Isha Verma\">IV</span>",
+          "target": [
+            "span[title=\"Isha Verma\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #6f7484, background color: #efe1e9, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6f7484",
+                "bgColor": "#dceaf1",
+                "contrastRatio": 3.78,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"avatar avatar--sm avatar--sky\" aria-hidden=\"true\" title=\"Kabir Shah\">KS</span>",
+                  "target": [
+                    "span[title=\"Kabir Shah\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.78 (foreground color: #6f7484, background color: #dceaf1, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"avatar avatar--sm avatar--sky\" aria-hidden=\"true\" title=\"Kabir Shah\">KS</span>",
+          "target": [
+            "span[title=\"Kabir Shah\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #6f7484, background color: #dceaf1, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6f7484",
+                "bgColor": "#dceaf1",
+                "contrastRatio": 3.78,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"avatar avatar--sm avatar--sky\" aria-hidden=\"true\" title=\"Rohan Iyer\">RI</span>",
+                  "target": [
+                    "span[title=\"Rohan Iyer\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.78 (foreground color: #6f7484, background color: #dceaf1, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"avatar avatar--sm avatar--sky\" aria-hidden=\"true\" title=\"Rohan Iyer\">RI</span>",
+          "target": [
+            "span[title=\"Rohan Iyer\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #6f7484, background color: #dceaf1, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6f7484",
+                "bgColor": "#efe1e9",
+                "contrastRatio": 3.68,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "bold",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"avatar avatar--sm avatar--plum\" aria-hidden=\"true\" title=\"Ananya Rao\">AR</span>",
+                  "target": [
+                    "span[title=\"Ananya Rao\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.68 (foreground color: #6f7484, background color: #efe1e9, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"avatar avatar--sm avatar--plum\" aria-hidden=\"true\" title=\"Ananya Rao\">AR</span>",
+          "target": [
+            "span[title=\"Ananya Rao\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #6f7484, background color: #efe1e9, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "empty-table-header",
+      "impact": "minor",
+      "tags": [
+        "cat.name-role-value",
+        "best-practice"
+      ],
+      "description": "Ensure table headers have discernible text",
+      "help": "Table header text should not be empty",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/empty-table-header?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "minor",
+          "html": "<th aria-label=\"Actions\"></th>",
+          "target": [
+            "th[aria-label=\"Actions\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": 12
+    }
+  ],
+  "passes": 44
+}

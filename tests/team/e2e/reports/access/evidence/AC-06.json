@@ -1,0 +1,7 @@
+{
+  "request": "GET http://localhost:5001/api/leave-requests/55",
+  "status": 404,
+  "body": {
+    "message": "Leave request not found."
+  }
+}

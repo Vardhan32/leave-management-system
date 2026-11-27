@@ -5,7 +5,7 @@
   --navy: #1e2a44;
   --navy-soft: #2b3a5b;
   --ink: #222b3d;
-  --muted: #6f7484;
+  --muted: #5d6373; /* was #6f7484 (3.7:1 on the cream surfaces); now 4.7:1 or better */
   --line: #e5ddce;
   --line-strong: #d6cbb8;
   --coral: #de6653;
@@ -504,7 +504,7 @@ svg {
 
 .status--cancelled {
   background: #e9e6df;
-  color: #6f6a61;
+  color: #575349;
 }
 
 .type-tag {
@@ -3451,4 +3451,20 @@ textarea:focus {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.modal:focus {
+  outline: none;
 }

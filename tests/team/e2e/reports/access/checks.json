@@ -1,0 +1,119 @@
+[
+  {
+    "id": "AC-01",
+    "role": "employee",
+    "action": "open /approvals in the browser",
+    "expected": "denied (redirect to /)",
+    "observed": "URL is /, no Approvals link in the menu",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-01.png",
+    "pass": true
+  },
+  {
+    "id": "AC-02",
+    "role": "employee",
+    "action": "open /team in the browser",
+    "expected": "denied (redirect to /)",
+    "observed": "URL is /",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-02.png",
+    "pass": true
+  },
+  {
+    "id": "AC-03",
+    "role": "employee",
+    "action": "POST /api/leave-requests/52/review {approve} on own request",
+    "expected": "403, request stays pending",
+    "observed": "403 \"Admin access is required.\", request still pending",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-03.json",
+    "pass": true
+  },
+  {
+    "id": "AC-04",
+    "role": "admin",
+    "action": "approve a pending request of another employee in the Approvals screen",
+    "expected": "allowed, status becomes approved",
+    "observed": "status is approved",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-04.png",
+    "pass": true
+  },
+  {
+    "id": "AC-05",
+    "role": "admin",
+    "action": "POST /api/leave-requests/54/review {approve} on the admin's own request",
+    "expected": "403, request stays pending",
+    "observed": "403 \"You cannot review your own leave request.\", request still pending",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-05.json",
+    "pass": true
+  },
+  {
+    "id": "AC-06",
+    "role": "employee",
+    "action": "GET /api/leave-requests/55 (belongs to another employee)",
+    "expected": "404 and no data from the request",
+    "observed": "404 \"Leave request not found.\"",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-06.json",
+    "pass": true
+  },
+  {
+    "id": "AC-07",
+    "role": "employee",
+    "action": "POST /api/leave-requests/56/cancel on own pending request",
+    "expected": "200, status cancelled",
+    "observed": "200, status cancelled",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-07.json",
+    "pass": true
+  },
+  {
+    "id": "AC-08",
+    "role": "employee",
+    "action": "POST /api/leave-requests/57/cancel on another employee's request",
+    "expected": "403, request stays pending",
+    "observed": "403 \"Only the employee who applied can cancel this request.\", request still pending",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-08.json",
+    "pass": true
+  },
+  {
+    "id": "AC-09",
+    "role": "employee",
+    "action": "GET /api/leave-balances?user_id=3 (another employee)",
+    "expected": "403",
+    "observed": "403 \"You can only view your own leave balances.\"",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-09.json",
+    "pass": true
+  },
+  {
+    "id": "AC-10",
+    "role": "employee",
+    "action": "GET /api/team (admin directory)",
+    "expected": "403",
+    "observed": "403 \"Admin access is required.\"",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-10.json",
+    "pass": true
+  },
+  {
+    "id": "AC-11",
+    "role": "anonymous",
+    "action": "open /leave without signing in",
+    "expected": "denied (redirect to /login)",
+    "observed": "URL is /login",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-11.png",
+    "pass": true
+  },
+  {
+    "id": "AC-12",
+    "role": "anonymous",
+    "action": "GET /api/leave-requests without a token",
+    "expected": "401",
+    "observed": "401 \"Authentication required.\"",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-12.json",
+    "pass": true
+  },
+  {
+    "id": "AC-13",
+    "role": "admin",
+    "action": "open /approvals in the browser",
+    "expected": "allowed",
+    "observed": "URL is /approvals, heading \"Leave approvals\" shown",
+    "evidence": "tests/team/e2e/reports/access/evidence/AC-13.png",
+    "pass": true
+  }
+]

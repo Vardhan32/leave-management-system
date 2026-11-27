@@ -1,0 +1,7 @@
+{
+  "request": "POST http://localhost:5001/api/leave-requests/57/cancel",
+  "status": 403,
+  "body": {
+    "message": "Only the employee who applied can cancel this request."
+  }
+}

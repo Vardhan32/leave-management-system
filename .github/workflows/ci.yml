@@ -6,20 +6,47 @@ on:
   pull_request:
 
 jobs:
-  api-tests:
+  quality-gate:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: backend
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.11"
           cache: pip
           cache-dependency-path: backend/requirements.txt
-      - run: pip install -r requirements.txt
-      - run: pytest -q
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: |
+          python -m pytest ../tests/team/area1/test_services.py \
+            -v --tb=short \
+            --junitxml=../tests/team/area1/test_results.xml
+
+      - name: Run mutation testing (mutmut)
+        run: |
+          python -m mutmut run \
+            --paths-to-mutate=app/services.py \
+            --tests-dir=../tests/team/area1/ \
+            --runner="python -m pytest ../tests/team/area1/test_services.py -x -q --no-header --tb=no"
+
+      - name: Enforce mutation score = 100%
+        run: |
+          RESULTS=$(python -m mutmut results 2>&1 || true)
+          echo "$RESULTS"
+          SURVIVED=$(echo "$RESULTS" | grep -c "Survived" || true)
+          echo "Survived mutant lines: $SURVIVED"
+          if [ "$SURVIVED" -gt 1 ]; then
+            echo "::error::Mutation testing failed - surviving mutants detected"
+            exit 1
+          fi
+          echo "All mutants killed - mutation gate passed"
 
   frontend-build:
     runs-on: ubuntu-latest

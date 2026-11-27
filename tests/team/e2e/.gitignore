@@ -1,0 +1,4 @@
+node_modules/
+# screenshots, traces and videos of the last run; the HTML report in reports/html keeps what is needed
+reports/artifacts/
+test-results/

@@ -1,0 +1,37 @@
+Wrote 149 cases to /tmp/changed_cases.json
+   cancelLeaveRequest EP 5
+   createLeaveRequest BVA 27
+   createLeaveRequest EP 25
+   getLeaveRequest EP 5
+   listBalances EP 6
+   listLeaveRequests BVA 9
+   listLeaveRequests EP 26
+   login BVA 3
+   login EP 10
+   reviewLeaveRequest BVA 15
+   reviewLeaveRequest EP 18
+Cases before: 149  after: 149
+Added: 6
+  + createLeaveRequest.CASUAL.BVA.allocation+1_(11_days) -> 422
+  + createLeaveRequest.CASUAL.BVA.allocation-1_(9_days) -> 201
+  + createLeaveRequest.CASUAL.BVA.allocation_(10_days) -> 201
+  + createLeaveRequest.reason.BVA.maxLength+1_(301) -> 422
+  + createLeaveRequest.reason.BVA.maxLength-1_(299) -> 201
+  + createLeaveRequest.reason.BVA.maxLength_(300) -> 201
+Removed: 6
+  - createLeaveRequest.CASUAL.BVA.allocation+1_(13_days) -> 422
+  - createLeaveRequest.CASUAL.BVA.allocation-1_(11_days) -> 201
+  - createLeaveRequest.CASUAL.BVA.allocation_(12_days) -> 201
+  - createLeaveRequest.reason.BVA.maxLength+1_(501) -> 422
+  - createLeaveRequest.reason.BVA.maxLength-1_(499) -> 201
+  - createLeaveRequest.reason.BVA.maxLength_(500) -> 201
+Changed: 3
+  ~ reviewLeaveRequest.CASUAL.BVA.remaining=need+1_(3_left)
+       allocation: 12 -> 10
+       value: {'prior_days': 9, 'request_days': 2} -> {'prior_days': 7, 'request_days': 2}
+  ~ reviewLeaveRequest.CASUAL.BVA.remaining=need-1_(1_left)
+       allocation: 12 -> 10
+       value: {'prior_days': 11, 'request_days': 2} -> {'prior_days': 9, 'request_days': 2}
+  ~ reviewLeaveRequest.CASUAL.BVA.remaining=need_(2_left)
+       allocation: 12 -> 10
+       value: {'prior_days': 10, 'request_days': 2} -> {'prior_days': 8, 'request_days': 2}

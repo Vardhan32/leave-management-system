@@ -1,0 +1,48 @@
+﻿
+
+  █ THRESHOLDS 
+
+    http_req_duration{op:create,phase:steady}
+    ✓ 'p(95)<1000' p(95)=569.78ms
+
+    http_req_failed{op:cancel,phase:steady}
+    ✓ 'rate<0.01' rate=0.23%
+
+    http_req_failed{op:create,phase:steady}
+    ✗ 'rate<0.01' rate=22.32%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 1047   14.061353/s
+    checks_succeeded...: 88.15% 923 out of 1047
+    checks_failed......: 11.84% 124 out of 1047
+
+    ✗ create answered 201
+      ↳  78% — ✓ 462 / ✗ 123
+    ✗ cancel answered 200
+      ↳  99% — ✓ 461 / ✗ 1
+
+    HTTP
+    http_req_duration..............: avg=334.96ms min=17.23ms med=199.77ms p(90)=478.86ms p(95)=713.59ms p(99)=3.48s max=9.91s 
+      { expected_response:true }...: avg=341.67ms min=17.23ms med=203.76ms p(90)=495.75ms p(95)=767.23ms p(99)=3.55s max=9.36s 
+      { op:create,phase:steady }...: avg=283.55ms min=22.48ms med=194.29ms p(90)=434.68ms p(95)=569.78ms p(99)=1.76s max=9.31s 
+    http_req_failed................: 11.77% 124 out of 1053
+      { op:cancel,phase:steady }...: 0.23%  1 out of 428
+      { op:create,phase:steady }...: 22.32% 123 out of 551
+    http_reqs......................: 1053   14.141934/s
+
+    EXECUTION
+    iteration_duration.............: avg=602.07ms min=25.11ms med=371.41ms p(90)=888.49ms p(95)=1.25s    p(99)=5.87s max=10.13s
+    iterations.....................: 585    7.85663/s
+    vus............................: 5      min=0           max=5
+    vus_max........................: 5      min=5           max=5
+
+    NETWORK
+    data_received..................: 844 kB 11 kB/s
+    data_sent......................: 592 kB 7.9 kB/s
+
+
+
+time="2026-11-24T17:27:18+05:00" level=error msg="thresholds on metrics 'http_req_failed{op:create,phase:steady}' have been crossed"
+k6 exit code: 99 (0 = all thresholds met, 99 = a threshold was crossed)

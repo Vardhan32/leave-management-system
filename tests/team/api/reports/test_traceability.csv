@@ -1,0 +1,252 @@
+test,requirements,outcome
+test_access_and_auth.py::test_health_needs_no_token,FR-12,passed
+test_access_and_auth.py::test_missing_token_is_401[GET /api/auth/me],FR-12,passed
+test_access_and_auth.py::test_missing_token_is_401[GET /api/leave-types],FR-12,passed
+test_access_and_auth.py::test_missing_token_is_401[GET /api/leave-balances],FR-12,passed
+test_access_and_auth.py::test_missing_token_is_401[GET /api/leave-requests],FR-12,passed
+test_access_and_auth.py::test_missing_token_is_401[POST /api/leave-requests],FR-12,passed
+test_access_and_auth.py::test_missing_token_is_401[GET /api/leave-requests/1],FR-12,passed
+test_access_and_auth.py::test_missing_token_is_401[POST /api/leave-requests/1/cancel],FR-12,passed
+test_access_and_auth.py::test_missing_token_is_401[POST /api/leave-requests/1/review],FR-12,passed
+test_access_and_auth.py::test_malformed_token_is_401[GET /api/auth/me],FR-12,passed
+test_access_and_auth.py::test_malformed_token_is_401[GET /api/leave-types],FR-12,passed
+test_access_and_auth.py::test_malformed_token_is_401[GET /api/leave-balances],FR-12,passed
+test_access_and_auth.py::test_malformed_token_is_401[GET /api/leave-requests],FR-12,passed
+test_access_and_auth.py::test_malformed_token_is_401[POST /api/leave-requests],FR-12,passed
+test_access_and_auth.py::test_malformed_token_is_401[GET /api/leave-requests/1],FR-12,passed
+test_access_and_auth.py::test_malformed_token_is_401[POST /api/leave-requests/1/cancel],FR-12,passed
+test_access_and_auth.py::test_malformed_token_is_401[POST /api/leave-requests/1/review],FR-12,passed
+test_access_and_auth.py::test_expired_token_is_401,FR-12,passed
+test_access_and_auth.py::test_token_of_deactivated_user_is_401,FR-12,passed
+test_access_and_auth.py::test_me_returns_signed_in_user,FR-12,passed
+test_access_and_auth.py::test_login_email_is_case_insensitive,FR-12,passed
+test_access_and_auth.py::test_login_wrong_password_is_401,FR-12,passed
+test_access_and_auth.py::test_employee_cannot_read_another_balance,FR-06 FR-12,passed
+test_access_and_auth.py::test_admin_reads_any_balance,FR-06,passed
+test_access_and_auth.py::test_admin_unknown_user_balance_is_404,FR-06,passed
+test_access_and_auth.py::test_balance_defaults_to_current_year,FR-06,passed
+test_access_and_auth.py::test_employee_lists_only_own_requests,FR-06 FR-12,passed
+test_access_and_auth.py::test_employee_cannot_open_another_request,FR-06 FR-12,passed
+test_access_and_auth.py::test_admin_sees_and_filters_everything,FR-06,passed
+test_access_and_auth.py::test_filters_by_status_type_and_year,FR-06,passed
+test_access_and_auth.py::test_admin_cannot_cancel_for_an_employee,FR-11 FR-12,passed
+test_access_and_auth.py::test_review_unknown_request_is_404,FR-10,passed
+test_business_rules.py::test_br1_balance_limit_on_submission[createLeaveRequest.CASUAL.BVA.allocation-1_(11_days)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_limit_on_submission[createLeaveRequest.CASUAL.BVA.allocation_(12_days)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_limit_on_submission[createLeaveRequest.CASUAL.BVA.allocation+1_(13_days)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_limit_on_submission[createLeaveRequest.SICK.BVA.allocation-1_(9_days)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_limit_on_submission[createLeaveRequest.SICK.BVA.allocation_(10_days)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_limit_on_submission[createLeaveRequest.SICK.BVA.allocation+1_(11_days)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_limit_on_submission[createLeaveRequest.EARNED.BVA.allocation-1_(14_days)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_limit_on_submission[createLeaveRequest.EARNED.BVA.allocation_(15_days)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_limit_on_submission[createLeaveRequest.EARNED.BVA.allocation+1_(16_days)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_rechecked_on_approval[reviewLeaveRequest.CASUAL.BVA.remaining=need+1_(3_left)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_rechecked_on_approval[reviewLeaveRequest.CASUAL.BVA.remaining=need_(2_left)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_rechecked_on_approval[reviewLeaveRequest.CASUAL.BVA.remaining=need-1_(1_left)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_rechecked_on_approval[reviewLeaveRequest.SICK.BVA.remaining=need+1_(3_left)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_rechecked_on_approval[reviewLeaveRequest.SICK.BVA.remaining=need_(2_left)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_rechecked_on_approval[reviewLeaveRequest.SICK.BVA.remaining=need-1_(1_left)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_rechecked_on_approval[reviewLeaveRequest.EARNED.BVA.remaining=need+1_(3_left)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_rechecked_on_approval[reviewLeaveRequest.EARNED.BVA.remaining=need_(2_left)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br1_balance_rechecked_on_approval[reviewLeaveRequest.EARNED.BVA.remaining=need-1_(1_left)],BR1 FR-05 FR-09,passed
+test_business_rules.py::test_br2_review_decision_table[R1],BR2 FR-10,passed
+test_business_rules.py::test_br2_review_decision_table[R2],BR2 FR-10,passed
+test_business_rules.py::test_br2_review_decision_table[R3],BR2 FR-10,passed
+test_business_rules.py::test_br2_review_decision_table[R4],BR2 FR-10,passed
+test_business_rules.py::test_br2_review_decision_table[R5],BR2 FR-10,passed
+test_business_rules.py::test_br2_review_decision_table[R6],BR2 FR-10,passed
+test_business_rules.py::test_br2_review_decision_table[R7],BR2 FR-10,passed
+test_business_rules.py::test_br2_review_decision_table[R8],BR2 FR-10,passed
+test_business_rules.py::test_br2_rejection_needs_note[N1],BR2 FR-07 FR-08,passed
+test_business_rules.py::test_br2_rejection_needs_note[N2],BR2 FR-07 FR-08,passed
+test_business_rules.py::test_br2_rejection_needs_note[N3],BR2 FR-07 FR-08,passed
+test_business_rules.py::test_br2_rejection_needs_note[N4],BR2 FR-07 FR-08,passed
+test_business_rules.py::test_br2_rejection_needs_note[N5],BR2 FR-07 FR-08,passed
+test_business_rules.py::test_cancel_decision_table[C1],BR3 FR-11,passed
+test_business_rules.py::test_cancel_decision_table[C2],BR3 FR-11,passed
+test_business_rules.py::test_cancel_decision_table[C3],BR3 FR-11,passed
+test_business_rules.py::test_cancel_decision_table[C4],BR3 FR-11,passed
+test_business_rules.py::test_cancel_decision_table[C5],BR3 FR-11,passed
+test_business_rules.py::test_cancel_decision_table[C6],BR3 FR-11,passed
+test_business_rules.py::test_cancel_decision_table[C7],BR3 FR-11,passed
+test_business_rules.py::test_cancel_decision_table[C8],BR3 FR-11,passed
+test_business_rules.py::test_br4_overlap_boundaries[O1],BR4 FR-04,passed
+test_business_rules.py::test_br4_overlap_boundaries[O2],BR4 FR-04,passed
+test_business_rules.py::test_br4_overlap_boundaries[O3],BR4 FR-04,passed
+test_business_rules.py::test_br4_overlap_boundaries[O4],BR4 FR-04,passed
+test_business_rules.py::test_br4_overlap_boundaries[O5],BR4 FR-04,passed
+test_business_rules.py::test_br4_overlap_boundaries[O6],BR4 FR-04,passed
+test_business_rules.py::test_br4_closed_requests_do_not_block[reject],BR4 FR-04,passed
+test_business_rules.py::test_br4_closed_requests_do_not_block[cancel],BR4 FR-04,passed
+test_business_rules.py::test_br4_overlap_is_per_employee,BR4 FR-04 FR-12,passed
+test_business_rules.py::test_dates_reversed_range,FR-03,passed
+test_business_rules.py::test_dates_cross_year,FR-03,passed
+test_business_rules.py::test_dates_weekend_only,FR-03,passed
+test_business_rules.py::test_dates_weekend_is_not_counted,FR-03,passed
+test_business_rules.py::test_dates_reversed_range_is_reported_before_past_start,FR-03,passed
+test_business_rules.py::test_dates_checked_before_balance,FR-03 FR-05,passed
+test_endpoint_weaknesses.py::test_wk01_balance_year_out_of_range_is_rejected,FR-06,xfailed
+test_endpoint_weaknesses.py::test_wk02_fractional_leave_type_id_is_rejected,FR-02,xfailed
+test_endpoint_weaknesses.py::test_wk03_search_treats_percent_literally,FR-06,xfailed
+test_endpoint_weaknesses.py::test_wk04_pending_request_starting_today_can_be_cancelled,BR3 FR-11,xfailed
+test_endpoint_weaknesses.py::test_wk05_admin_can_combine_department_and_search,FR-06,xfailed
+test_endpoint_weaknesses.py::test_wk06_stale_pending_request_cannot_be_approved,FR-07 FR-09,xfailed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.(body).EP.body_is_a_JSON_array],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.leave_type_id.EP.valid_example],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.leave_type_id.EP.not_a_number],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.leave_type_id.EP.missing],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.leave_type_id.EP.null],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.leave_type_id.EP.boolean],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.leave_type_id.EP.numeric_string],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.leave_type_id.BVA.minimum-1_(0)],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.leave_type_id.BVA.minimum_(1)],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.leave_type_id.BVA.minimum+1_(2)],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.leave_type_id.BVA.lookup-max-1_(2)],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.leave_type_id.BVA.lookup-max_(3)],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.leave_type_id.BVA.lookup-max+1_(4)],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.start_date.EP.valid_example],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.start_date.EP.missing],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.start_date.EP.empty_string],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.start_date.EP.wrong_separator],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.start_date.EP.impossible_date],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.start_date.EP.not_a_date],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.start_date.BVA.today-1],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.start_date.BVA.today],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.start_date.BVA.today+1],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.end_date.EP.valid_example],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.end_date.EP.missing],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.end_date.EP.empty_string],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.end_date.EP.wrong_separator],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.end_date.EP.impossible_date],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.end_date.EP.not_a_date],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.end_date.BVA.start_date-1],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.end_date.BVA.start_date],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.end_date.BVA.start_date+1],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.reason.EP.valid_example],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.reason.EP.missing],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.reason.EP.empty_string],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.reason.EP.whitespace_only],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.reason.EP.not_a_string],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.reason.EP.padded_below_minLength],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.reason.BVA.minLength-1_(9)],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.reason.BVA.minLength_(10)],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.reason.BVA.minLength+1_(11)],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.reason.BVA.maxLength-1_(499)],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.reason.BVA.maxLength_(500)],FR-01 FR-02,passed
+test_generated_inputs.py::test_create_leave_request_input[createLeaveRequest.reason.BVA.maxLength+1_(501)],FR-01 FR-02,passed
+test_generated_inputs.py::test_login_input[login.(body).EP.body_is_a_JSON_array],FR-12,passed
+test_generated_inputs.py::test_login_input[login.email.EP.valid_example],FR-12,passed
+test_generated_inputs.py::test_login_input[login.email.EP.missing],FR-12,passed
+test_generated_inputs.py::test_login_input[login.email.EP.empty_string],FR-12,passed
+test_generated_inputs.py::test_login_input[login.email.EP.whitespace_only],FR-12,passed
+test_generated_inputs.py::test_login_input[login.email.EP.not_a_string],FR-12,passed
+test_generated_inputs.py::test_login_input[login.email.BVA.maxLength-1_(254)],FR-12,passed
+test_generated_inputs.py::test_login_input[login.email.BVA.maxLength_(255)],FR-12,passed
+test_generated_inputs.py::test_login_input[login.email.BVA.maxLength+1_(256)],FR-12,passed
+test_generated_inputs.py::test_login_input[login.password.EP.valid_example],FR-12,passed
+test_generated_inputs.py::test_login_input[login.password.EP.missing],FR-12,passed
+test_generated_inputs.py::test_login_input[login.password.EP.empty_string],FR-12,passed
+test_generated_inputs.py::test_login_input[login.password.EP.not_a_string],FR-12,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.(body).EP.body_is_a_JSON_array],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.decision.EP.valid_example],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.decision.EP.missing],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.decision.EP.empty_string],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.decision.EP.whitespace_only],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.decision.EP.not_a_string],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.decision.EP.enum_value_reject],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.decision.EP.outside_enum],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.decision.EP.enum_wrong_case],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.decision.EP.enum_with_padding],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.decision.BVA.maxLength-1_(19)],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.decision.BVA.maxLength_(20)],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.decision.BVA.maxLength+1_(21)],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.note.EP.valid_example],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.note.EP.missing_(optional)],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.note.EP.not_a_string],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.note.BVA.maxLength-1_(499)],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.note.BVA.maxLength_(500)],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_review_input[reviewLeaveRequest.note.BVA.maxLength+1_(501)],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_query_parameter[listBalances.year.EP.valid_example],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listBalances.year.EP.not_a_number],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listBalances.year.EP.omitted],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listBalances.user_id.EP.valid_example],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listBalances.user_id.EP.not_a_number],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listBalances.user_id.EP.omitted],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.status.EP.valid_example],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.status.EP.missing_(optional)],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.status.EP.enum_value_approved],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.status.EP.enum_value_rejected],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.status.EP.enum_value_cancelled],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.status.EP.outside_enum],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.status.EP.enum_wrong_case],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.leave_type_id.EP.valid_example],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.leave_type_id.EP.not_a_number],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.leave_type_id.EP.omitted],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.year.EP.valid_example],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.year.EP.not_a_number],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.year.EP.omitted],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.q.EP.valid_example],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.q.EP.missing_(optional)],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.page.EP.valid_example],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.page.EP.not_a_number],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.page.EP.omitted],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.page.BVA.minimum-1_(0)],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.page.BVA.minimum_(1)],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.page.BVA.minimum+1_(2)],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.per_page.EP.valid_example],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.per_page.EP.not_a_number],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.per_page.EP.omitted],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.per_page.BVA.minimum-1_(0)],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.per_page.BVA.minimum_(1)],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.per_page.BVA.minimum+1_(2)],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.per_page.BVA.maximum-1_(49)],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.per_page.BVA.maximum_(50)],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.per_page.BVA.maximum+1_(51)],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.user_id.EP.valid_example],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.user_id.EP.not_a_number],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.user_id.EP.omitted],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.department.EP.valid_example],FR-06,passed
+test_generated_inputs.py::test_query_parameter[listLeaveRequests.department.EP.missing_(optional)],FR-06,passed
+test_generated_inputs.py::test_path_id[getLeaveRequest.id.EP.existing_id],FR-06,passed
+test_generated_inputs.py::test_path_id[getLeaveRequest.id.EP.unknown_id],FR-06,passed
+test_generated_inputs.py::test_path_id[getLeaveRequest.id.EP.zero],FR-06,passed
+test_generated_inputs.py::test_path_id[getLeaveRequest.id.EP.negative],FR-06,passed
+test_generated_inputs.py::test_path_id[getLeaveRequest.id.EP.not_a_number],FR-06,passed
+test_generated_inputs.py::test_path_id[cancelLeaveRequest.id.EP.existing_id],BR3 FR-11,passed
+test_generated_inputs.py::test_path_id[cancelLeaveRequest.id.EP.unknown_id],BR3 FR-11,passed
+test_generated_inputs.py::test_path_id[cancelLeaveRequest.id.EP.zero],BR3 FR-11,passed
+test_generated_inputs.py::test_path_id[cancelLeaveRequest.id.EP.negative],BR3 FR-11,passed
+test_generated_inputs.py::test_path_id[cancelLeaveRequest.id.EP.not_a_number],BR3 FR-11,passed
+test_generated_inputs.py::test_path_id[reviewLeaveRequest.id.EP.existing_id],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_path_id[reviewLeaveRequest.id.EP.unknown_id],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_path_id[reviewLeaveRequest.id.EP.zero],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_path_id[reviewLeaveRequest.id.EP.negative],FR-07 FR-08 FR-10,passed
+test_generated_inputs.py::test_path_id[reviewLeaveRequest.id.EP.not_a_number],FR-07 FR-08 FR-10,passed
+test_generator.py::test_committed_cases_match_the_spec,,passed
+test_generator.py::test_reason_gets_three_point_bva_on_both_limits,,passed
+test_generator.py::test_every_invalid_body_case_changes_one_field_only,,passed
+test_generator.py::test_changing_two_constraints_changes_the_cases,,passed
+test_generator.py::test_tokens_resolve_relative_to_today,,passed
+test_generator.py::test_end_date_follows_start_date,,passed
+test_generator.py::test_missing_fields_are_dropped,,passed
+test_generator.py::test_add_working_days_skips_weekends,,passed
+test_generator.py::test_schema_checker_catches_missing_and_wrong_types,,passed
+test_state_transitions.py::test_pending_to_approved,BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_pending_to_rejected,BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_pending_to_cancelled,BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_approved_to_cancelled_returns_days,BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_disallowed_transition[approved-approve],BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_disallowed_transition[approved-reject],BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_disallowed_transition[rejected-approve],BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_disallowed_transition[rejected-reject],BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_disallowed_transition[rejected-cancel],BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_disallowed_transition[cancelled-approve],BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_disallowed_transition[cancelled-reject],BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_disallowed_transition[cancelled-cancel],BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_pending_that_started_cannot_be_cancelled,BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_approved_that_started_cannot_be_cancelled,BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_repeated_submission_is_not_duplicated,BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_repeated_approval_counts_days_once,BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_repeated_cancel_returns_days_once,BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_repeated_rejection_keeps_first_note,BR3 FR-07 FR-08 FR-11,passed
+test_state_transitions.py::test_balance_flows_between_workflows,BR1 BR3 FR-05 FR-07 FR-08 FR-09 FR-11,passed
